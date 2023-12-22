@@ -1,0 +1,101 @@
+{% extends "layouts/main.html" %}
+
+{% block pageTitle %}
+  Landlords Checking Service – {{ serviceName }} – GOV.UK Prototype Kit
+{% endblock %}
+
+{% block header %}
+  <!-- Blank header with no service name for the start page -->
+  {{ govukHeader() }}
+{% endblock %}
+
+{% block beforeContent %}
+<div class="govuk-phase-banner">
+  <p class="govuk-phase-banner__content">
+    <strong class="govuk-tag govuk-phase-banner__content__tag">
+      BETA
+    </strong>
+    <span class="govuk-phase-banner__text">
+      This is a new service – your <a class="govuk-link" href="#">feedback</a> will help us to improve it.
+    </span>
+  </p>
+</div>
+
+{% endblock %}
+
+{% block content %}
+
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+
+      <h1 class="govuk-heading-xl">
+        Landlords {{ serviceName.toLowerCase() }}
+      </h1>
+
+      <p>Use this service to tell us about someone who no longer has the right to rent.</p>
+      <p>The person you are telling us about must:</p>
+      <ul class="govuk-list govuk-list--bullet">
+        <li>already be renting your property as their main home</li>
+        <li>have moved into your property after 01/12/2014</li>
+        <li>be at least 18 years old </li>
+      </ul>
+
+      <h2 class="govuk-heading-m">
+        Before you start
+      </h2>
+
+      <p>
+       You must have already checked the occupier's right to rent when their tenancy started.
+      </p>
+
+      <p>
+        Before making a report you must be confident that an existing occupier on whom you carried out initial checks at the start of their tenancy no longer has the right to rent by <a href="https://www.gov.uk/government/publications/right-to-rent-document-checks-a-user-guide">checking their relevant documents</a>.
+      </p>
+      
+      <p>
+        If the documents are being held by the Home Office or the person has an outstanding application or appeal, you must <a href="https://eforms.homeoffice.gov.uk/outreach/lcs-application.ofml">get verification from the Home Office</a> first regarding the person's ongoing right to rent.
+      </p>
+
+      <p>
+        If you have not carried out further document checks on someone who is renting your property, but you suspect a person is in the UK illegally, you can report them in confidence by using the <a href="https://www.gov.uk/report-immigration-crime">crime reporting service</a>.
+      </p>
+
+      {{ govukButton({
+        text: "Start now",
+        href: "/tenancy-start",
+        isStartButton: true
+      }) }}
+
+    </div>
+
+    <div class="govuk-grid-column-one-third">
+
+      <aside class="govuk-prototype-kit-common-templates-related-items" role="complementary">
+        <h2 class="govuk-heading-m" id="subsection-title">
+          Related links
+        </h2>
+        <nav role="navigation" aria-labelledby="subsection-title">
+          <ul class="govuk-list govuk-!-font-size-16">
+            <li>
+              <a href="https://www.gov.uk/landlord-immigration-check">
+                Check if someone can rent your residential property
+              </a>
+            </li>
+            <li>
+              <a href="https://www.gov.uk/government/publications/landlords-guide-to-right-to-rent-checks">
+                Landlord's guide to checking someone's right to rent
+              </a>
+            </li>
+            <li>
+              <a href="https://www.gov.uk/government/publications/right-to-rent-landlords-code-of-practice">
+                Landlord's code of practice to right to right immigration checks
+              </a>
+            </li>
+          </ul>
+        </nav>
+      </aside>
+
+    </div>
+  </div>
+
+{% endblock %}

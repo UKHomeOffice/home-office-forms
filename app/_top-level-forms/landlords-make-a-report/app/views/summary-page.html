@@ -1,0 +1,217 @@
+{% extends "layouts/main.html" %}
+
+{% block pageTitle %}
+  Check your answers – {{ serviceName }} – GOV.UK Prototype Kit
+{% endblock %}
+
+{% block beforeContent %}
+{{ govukBackLink({
+  text: "Back",
+  href: "javascript:window.history.back()"
+}) }}
+{% endblock %}
+
+{% block content %}
+
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds-from-desktop">
+      
+      <h1 class="govuk-heading-l">Summary</h1>
+
+      <p>Please check these details carefully before continuing. If any of the details are 
+        incorrect, please change them.
+      </p>
+
+      <h2 class="govuk-heading-m">Occupier details</h2>
+
+      {{ govukSummaryList({
+        classes: "govuk-!-margin-bottom-9",
+        rows: [
+          {
+            key: {
+              text: "Name"
+            },
+            value: {
+              text: data['tenant-name']
+            },
+            actions: {
+              items: [
+                {
+                  href: "/tenant-details#tenant-name",
+                  text: "Change",
+                  visuallyHiddenText: "name"
+                }
+              ]
+            }
+          },
+          {
+            key: {
+              text: "Date of birth"
+            },
+            value: {
+              text: data['tenant-bday-day'] + '/' + data['tenant-bday-month'] + '/' + data['tenant-bday-year']
+            },
+            actions: {
+              items: [
+                {
+                  href: "/tenant-details#tenant-bday-day",
+                  text: "Change",
+                  visuallyHiddenText: "date of birth"
+                }
+              ]
+            }
+          },
+          {
+            key: {
+              text: "Country of nationality"
+            },
+            value: {
+              text: data['country-select']
+            },
+            actions: {
+              items: [
+                {
+                  href: "/tenant-details#country-select",
+                  text: "Change",
+                  visuallyHiddenText: "customer reference"
+                }
+              ]
+            }
+          },
+          {
+            key: {
+              text: "Move-in date"
+            },
+            value: {
+              text: data["tenancy-start-day"] + '/' + data["tenancy-start-month"] + '/' + data["tenancy-start-year"] 
+            },
+            actions: {
+              items: [
+                {
+                  href: "/tenancy-start",
+                  text: "Change",
+                  visuallyHiddenText: "address"
+                }
+              ]
+            }
+          }
+        ]
+      }) }}
+
+      <h2 class="govuk-heading-m">Property details</h2>
+
+      {{ govukSummaryList({
+        classes: "govuk-!-margin-bottom-9",
+        rows: [
+          {
+            key: {
+              text: "Address"
+            },
+            value: {
+              html:   data['addressLine1'] + '<br>' +
+                      data['addressLine2'] + '<br>' +
+                      data['addressTown'] + '<br>' +
+                      data['addressCounty'] + '<br>' +
+                      data['addressPostcode']
+            } ,
+            actions: {
+              items: [
+                {
+                  href: "/property-details#address-line-1",
+                  text: "Change",
+                  visuallyHiddenText: "previous application number"
+                }
+              ]
+            }
+          }
+        ]
+      }) }}
+
+      <h2 class="govuk-heading-m">Landlord details</h2>
+
+      {{ govukSummaryList({
+        classes: "govuk-!-margin-bottom-9",
+        rows: [
+          {
+            key: {
+              text: "Full name"
+            },
+            value: {
+              text:   data['landlord-name']
+            } ,
+            actions: {
+              items: [
+                {
+                  href: "/landlord-details#landlord-name",
+                  text: "Change",
+                  visuallyHiddenText: "previous application number"
+                }
+              ]
+            }
+          },
+          {
+            key: {
+              text: "Company name"
+            },
+            value: {
+              text:   data['company-name'] or "Not provided"
+            } ,
+            actions: {
+              items: [
+                {
+                  href: "/landlord-details#company-name",
+                  text: "Change",
+                  visuallyHiddenText: "previous application number"
+                }
+              ]
+            }
+          },
+          {
+            key: {
+              text: "Email"
+            },
+            value: {
+              text:   data['email-address']
+            } ,
+            actions: {
+              items: [
+                {
+                  href: "/landlord-details#email-address",
+                  text: "Change",
+                  visuallyHiddenText: "previous application number"
+                }
+              ]
+            }
+          },
+          {
+            key: {
+              text: "Phone"
+            },
+            value: {
+              text:   data['phone-number'] or "Not provided"
+            } ,
+            actions: {
+              items: [
+                {
+                  href: "/landlord-details#phone-number",
+                  text: "Change",
+                  visuallyHiddenText: "previous application number"
+                }
+              ]
+            }
+          }
+        ]
+      }) }}
+
+      <form class="form-handler" method="post" action=/declaration>
+
+        {{ govukButton({
+          text: "Continue"
+        }) }}
+
+      </form>
+
+    </div>
+  </div>
+
+{% endblock %}
