@@ -1,0 +1,78 @@
+{% extends "layouts/main.html" %}
+
+{% block pageTitle %}
+  Landlords Checking Service – {{ serviceName }} – GOV.UK Prototype Kit
+{% endblock %}
+
+{% block header %}
+  <!-- Blank header with no service name for the start page -->
+  {{ govukHeader() }}
+{% endblock %}
+
+{% block beforeContent %}
+<div class="govuk-phase-banner">
+  <p class="govuk-phase-banner__content">
+    <strong class="govuk-tag govuk-phase-banner__content__tag">
+      BETA
+    </strong>
+    <span class="govuk-phase-banner__text">
+      This is a new service – your <a class="govuk-link" href="#">feedback</a> will help us to improve it.
+    </span>
+  </p>
+</div>
+
+{{ govukBackLink({
+  text: "Back",
+  href: "javascript:window.history.back()"
+}) }}
+
+{% endblock %}
+
+{% block content %}
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+      <h1 class="govuk-heading-l">Data protection statement </h1>
+
+      <p class="govuk-body"> The personal information entered on this form will be used for immigration control 
+        purposes. It may also be used to support the work of the Home Office and to prevent 
+        and detect fraud. The Home Office is the data controller in relation to the information
+        provided, which will be processed in accordance with the Data Protection Act 1998.</p>
+
+      <p class="govuk-body"> To ensure the security of the information provided we will only send responses to the 
+        email address that the landlord entered on the form. For further information on how the 
+        Home Office uses personal data, please see our <a href="https://www.gov.uk/government/organisations/home-office/about/personal-information-charter">Personal information charter</a>.</p>
+
+      <form action="/form-handler" method="post" novalidate>
+
+        {{ govukCheckboxes({
+          name: "waste",
+          fieldset: {
+            legend: {
+              text: ""
+            }
+          },
+          hint: {
+            text: ""
+          },
+          items: [
+            {
+              value: "carcasses",
+              text: "I have read and understood this Data Protection statement."
+            }
+          ]
+          }) }}
+
+
+        </form>
+          
+        {{ govukButton({
+            text: "Submit report",
+            href:"/report-submitted"
+          }) }}
+
+    </div>
+
+
+  </div>
+{% endblock %}
+

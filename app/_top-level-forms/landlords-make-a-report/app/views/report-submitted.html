@@ -1,0 +1,51 @@
+{% extends "layouts/main.html" %}
+
+{% block pageTitle %}
+  Landlords Checking Service – {{ serviceName }} – GOV.UK Prototype Kit
+{% endblock %}
+
+{% block header %}
+  <!-- Blank header with no service name for the start page -->
+  {{ govukHeader() }}
+{% endblock %}
+
+{% block beforeContent %}
+<div class="govuk-phase-banner">
+  <p class="govuk-phase-banner__content">
+    <strong class="govuk-tag govuk-phase-banner__content__tag">
+      BETA
+    </strong>
+    <span class="govuk-phase-banner__text">
+      This is a new service – your <a class="govuk-link" href="#">feedback</a> will help us to improve it.
+    </span>
+  </p>
+</div>
+
+{{ govukBackLink({
+  text: "Back",
+  href: "javascript:window.history.back()"
+}) }}
+
+{% endblock %}
+
+{% block content %}
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+      
+      {{ govukPanel({
+        titleText: "Report submitted",
+        html: "Your reference number<br><strong>HDJ2123F</strong>"
+      }) }}
+
+      <h2 class="govuk-heading-m">We have sent you a confirmation email</h2>
+
+      <p class="govuk-body">
+        Thank you for making a report to the Home Office about an existing occupant who no longer has the right to rent.
+      </p>
+      <p class="govuk-body">
+        An email containing the details of the report has been sent to the address you provided. The email contains a unique reference number which you should keep safe, as you may need it to prove that you’re not liable for a civil penalty.
+      </p>
+    </div>
+  </div>
+{% endblock %}
+

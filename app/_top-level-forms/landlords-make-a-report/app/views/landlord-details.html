@@ -1,0 +1,104 @@
+{% extends "layouts/main.html" %}
+
+{% block pageTitle %}
+  Landlords Checking Service – {{ serviceName }} – GOV.UK Prototype Kit
+{% endblock %}
+
+{% block header %}
+  <!-- Blank header with no service name for the start page -->
+  {{ govukHeader() }}
+{% endblock %}
+
+{% block beforeContent %}
+<div class="govuk-phase-banner">
+  <p class="govuk-phase-banner__content">
+    <strong class="govuk-tag govuk-phase-banner__content__tag">
+      BETA
+    </strong>
+    <span class="govuk-phase-banner__text">
+      This is a new service – your <a class="govuk-link" href="#">feedback</a> will help us to improve it.
+    </span>
+  </p>
+</div>
+
+{{ govukBackLink({
+  text: "Back",
+  href: "javascript:window.history.back()"
+}) }}
+
+{% endblock %}
+
+{% block content %}
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+      <h1 class="govuk-heading-l">Landlord or agent's details</h1>
+
+      <form class="form-handler" method="post" action="/summary-page">
+
+        {{ govukInput({
+          label: {
+            text: "Landlord or agent's name",
+            classes: "govuk-body"
+          },
+          classes: "govuk-!-width-full",
+          id: "landlord-name",
+          autocomplete: "name",
+          name: "landlord-name",
+          value: data['landlord-name']
+        }) }}
+
+        {{ govukInput({
+          label: {
+            text: "Company name (optional)",
+            classes: "govuk-body"
+          },
+          hint: {
+            text: ""
+          },
+          classes: "govuk-!-width-full",
+          id: "company-name",
+          autocomplete: "name",
+          name: "company-name",
+          value: data['company-name']
+        }) }}
+
+        {{ govukInput({
+          label: {
+            text: "Email address",
+            classes: "govuk-body"
+          },
+          hint: {
+            text: "Where we will send confirmation of your report"
+          },
+          classes: "govuk-!-width-full",
+          id: "email-address",
+          autocomplete: "email",
+          name: "email-address",
+          value: data['email-address']
+        }) }}
+
+        {{ govukInput({
+          label: {
+            text: "Phone number",
+            classes: "govuk-body"
+          },
+          classes: "govuk-input--width-10",
+          id: "phone-number",
+          autocomplete: "tel",
+          name: "phone-number",
+          value: data['phone-number']
+        }) }}
+
+        {{ govukButton({
+          text: "Continue"
+        }) }}
+
+      </div>
+
+    </form>
+
+    </div>
+
+  </div>
+{% endblock %}
+
