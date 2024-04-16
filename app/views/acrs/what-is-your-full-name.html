@@ -38,28 +38,23 @@
 <br>
 <br>
 
-  <div class="govuk-form-group">
-  <h1 class="govuk-label-wrapper">
-    <label class="govuk-label govuk-label--l" for="event-name">
-      What is your full name?
-    </label>
-  </h1>
-  <input class="govuk-input govuk-!-width-three-quarters" id="event-name" name="eventName" type="text">
-</div>
+<form action="/form-handler" method="post" novalidate>
+  {{ govukInput({
+    label: {
+      text: "What is your home postcode?",
+      isPageHeading: true,
+      classes: "govuk-label--l"
+    },
+    classes: "govuk-input--width-10",
+    id: "postcode",
+    name: "postcode",
+    autocomplete: "postal-code"
+  }) }}
 
-<br>
-
-<a href="is-this-full-names-email-address"
-<button type="submit" class="govuk-button" data-module="govuk-button">
-  Continue
-</button>
-</a>
-
-&nbsp;&nbsp;
-
-<button type="submit" class="govuk-button govuk-button--secondary" data-module="govuk-button">
-  Save and exit
-</button>
+  {{ govukButton({
+    text: "Continue"
+  }) }}
+</form>
 
   </div>
 
