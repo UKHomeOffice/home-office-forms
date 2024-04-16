@@ -1,0 +1,88 @@
+{% extends "layouts/main.html" %}
+
+{% block pageTitle %}
+  Apply to bring family to the UK (Afghan citizens) – {{ serviceName }} – GOV.UK Prototype Kit
+{% endblock %}
+
+{% block header %}
+{{ govukHeader({
+  homepageUrl: "#",
+  serviceName: "Apply to bring immediate family to the UK (Afghan citizens)",
+  serviceUrl: "#",
+  navigation: [
+   
+  ]
+}) }}
+{% endblock %}
+
+{% block beforeContent %}
+
+
+<div class="govuk-phase-banner">
+  <p class="govuk-phase-banner__content">
+    <strong class="govuk-tag govuk-phase-banner__content__tag">
+      BETA
+    </strong>
+    <span class="govuk-phase-banner__text">
+      This is a new service – your <a class="govuk-link" href="#">feedback</a> will help us to improve it.
+    </span>
+  </p>
+</div>
+
+{% endblock %}
+
+{% block content %}
+
+<a href="add-childs-details" class="govuk-back-link">Back</a>
+
+<br>
+<br>
+
+<h1 class="govuk-heading-xl">
+        Who is responsible for this child?
+      </h1>
+
+<div class="govuk-form-group">
+  <fieldset class="govuk-fieldset" aria-describedby="responsible-hint">
+    <legend class="govuk-fieldset__legend">
+      This person is legally responsible for this child.
+    </legend>
+
+    <br>
+    
+    <div class="govuk-checkboxes" data-module="govuk-checkboxes">
+      <div class="govuk-checkboxes__item">
+        <input class="govuk-checkboxes__input" id="responsible" name="responsible" type="checkbox" value="carcasses">
+        <label class="govuk-label govuk-checkboxes__label" for="responsible">
+          [Sponsor name]
+        </label>
+      </div>
+      <div class="govuk-checkboxes__item">
+        <input class="govuk-checkboxes__input" id="responsible-2" name="responsible" type="checkbox" value="mines">
+        <label class="govuk-label govuk-checkboxes__label" for="responsible-2">
+          Someone elsse
+        </label>
+      </div>
+    </div>
+  </fieldset>
+</div>
+
+<br>
+
+<a href="guardians-details"
+<button type="submit" class="govuk-button" data-module="govuk-button">
+  Continue
+</button>
+</a>
+
+&nbsp;&nbsp;
+
+<button type="submit" class="govuk-button govuk-button--secondary" data-module="govuk-button">
+  Save and exit
+</button>
+
+  </div>
+
+  </div>
+
+{% endblock %}

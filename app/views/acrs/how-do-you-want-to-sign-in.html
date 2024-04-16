@@ -1,0 +1,90 @@
+{% extends "layouts/main.html" %}
+
+{% block pageTitle %}
+  Apply to bring family to the UK (Afghan citizens) – {{ serviceName }} – GOV.UK Prototype Kit
+{% endblock %}
+
+{% block header %}
+{{ govukHeader({
+  homepageUrl: "#",
+  serviceName: "Apply to bring immediate family to the UK (Afghan citizens)",
+  serviceUrl: "#",
+  navigation: [
+   
+  ]
+}) }}
+{% endblock %}
+
+{% block beforeContent %}
+
+
+<div class="govuk-phase-banner">
+  <p class="govuk-phase-banner__content">
+    <strong class="govuk-tag govuk-phase-banner__content__tag">
+      BETA
+    </strong>
+    <span class="govuk-phase-banner__text">
+      This is a new service – your <a class="govuk-link" href="#">feedback</a> will help us to improve it.
+    </span>
+  </p>
+</div>
+
+{% endblock %}
+
+{% block content %}
+
+  <div class="govuk-form-group">
+  <h1 class="govuk-label-wrapper">
+    <label class="govuk-label govuk-label--l" for="event-name">
+      How do you want to sign in?
+    </label>
+  </h1>
+
+<br>
+
+<p class="govuk-body govuk-!-width-three-quarters">Please select whether you want to sign in using your Biometric residence permit (BRP) or your Unique application number (UAN).</p>
+
+<br>
+<div>
+  </fieldset>
+    <div class="govuk-radios" data-module="govuk-radios">
+      <div class="govuk-radios__item">
+        <input class="govuk-radios__input" id="partner" name="partner" type="radio" value="yes~enter-your-details-to-sign-in">
+        <label class="govuk-label govuk-radios__label" for="partner">
+          BRP
+        </label>
+      </div>
+      
+      <div class="govuk-radios__item">
+        <input class="govuk-radios__input" id="partner-2" name="partner" type="radio" value="no">
+        <label class="govuk-label govuk-radios__label" for="partner-2">
+          UAN
+        </label>
+      </div>
+      
+      
+    </div>
+  </fieldset>
+</div>
+
+</div>
+
+<br>
+
+<a href="enter-your-details-to-sign-in-brp"
+<button type="submit" class="govuk-button" data-module="govuk-button">
+  Continue
+</button>
+</a>
+
+&nbsp;&nbsp;
+
+<button type="submit" class="govuk-button govuk-button--secondary" data-module="govuk-button">
+  Save and exit
+</button>
+
+  </div>
+
+  </div>
+
+{% endblock %}
