@@ -42,7 +42,7 @@
 
 <br>
 
-<p class="govuk-body govuk-!-width-three-quarters">Please select whether you want to sign in using your Biometric residence permit (BRP) or your Unique application number (UAN).</p>
+<p class="govuk-body govuk-!-width-three-quarters">You can use a biometric residence permit (BRP) number or a unique application number to sign in to this form.</p>
 
 <br>
 <form class="form" action="/signin" method="post">
@@ -55,11 +55,17 @@
   items: [
     {
       value: "BRP",
-      text: "Using a biometric residence permit (BRP) number"
+      text: "Using a biometric residence permit (BRP) number",
+      hint: {
+        text: "For example, 'RZ123456'"
+      }
     },
     {
       value: "UAN",
-      text: "Using a unique application number"
+      text: "Using a unique application number",
+      hint: {
+        text: "For example,'1234-1234-1234-1234'
+      }
     }
   ]
 }) }}
