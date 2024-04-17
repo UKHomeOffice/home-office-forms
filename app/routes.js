@@ -7,12 +7,23 @@ const govukPrototypeKit = require('govuk-prototype-kit')
 const router = govukPrototypeKit.requests.setupRouter()
 
 // Add your routes here
-router.post('/evidence-answer', function(request, response) {
+router.post('/signin', function(request, response) {
 
-    var evidence = request.session.data['evidence']
-    if (evidence.includes("There is evidence I cannot provide")){
-        response.redirect("/there-is-evidence-i-cannot-provide")
+    var signin = request.session.data['signin']
+    if (signin == "BRP"){
+        response.redirect("/acrs/enter-your-details-to-sign-in-brp")
     } else {
-        response.redirect("/where-should-we-send-your-decision")
+        response.redirect("/acrs/enter-your-details-to-sign-in-uan")
     }
 })
+
+router.post('/who', function(request, response) {
+
+    var who = request.session.data['who']
+    if (who == "The applicant"){
+        response.redirect("/acrs/what-is-your-full-name")
+    } else if (req.session.data['who'] === 'Someone helping the applicant') {
+        response.redirect("")
+    }
+})
+ 

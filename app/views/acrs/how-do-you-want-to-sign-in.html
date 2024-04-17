@@ -45,6 +45,7 @@
 <p class="govuk-body govuk-!-width-three-quarters">Please select whether you want to sign in using your Biometric residence permit (BRP) or your Unique application number (UAN).</p>
 
 <br>
+<<<<<<< Updated upstream
 <div>
   </fieldset>
     <div class="govuk-radios" data-module="govuk-radios">
@@ -66,25 +67,41 @@
     </div>
   </fieldset>
 </div>
+=======
+<form class="form" action="/signin" method="post">
+>>>>>>> Stashed changes
 
-</div>
+{{ govukRadios({
+  name: "signin",
+  value: data['signin'],
+  fieldset: {
+  },
+  items: [
+    {
+      value: "BRP",
+      text: "BRP"
+    },
+    {
+      value: "UAN",
+      text: "UAN"
+    }
+  ]
+}) }}
 
 <br>
+<br>
 
-<a href="enter-your-details-to-sign-in-brp"
-<button type="submit" class="govuk-button" data-module="govuk-button">
-  Continue
-</button>
-</a>
+{{ govukButton({
+  text: "Continue"
+}) }}
 
-&nbsp;&nbsp;
+{{ govukButton({
+  text: "Save and exit",
+  classes: "govuk-button--secondary"
+}) }}
 
-<button type="submit" class="govuk-button govuk-button--secondary" data-module="govuk-button">
-  Save and exit
-</button>
+</form>
 
-  </div>
-
-  </div>
+</div>
 
 {% endblock %}
