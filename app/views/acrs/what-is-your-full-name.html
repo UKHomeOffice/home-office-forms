@@ -38,22 +38,30 @@
 <br>
 <br>
 
-<form action="/form-handler" method="post" novalidate>
+<form action="/is-this-full-names-email-address" method="post">
   {{ govukInput({
     label: {
-      text: "What is your home postcode?",
+      text: "What is your full name?",
       isPageHeading: true,
       classes: "govuk-label--l"
     },
-    classes: "govuk-input--width-10",
-    id: "postcode",
-    name: "postcode",
-    autocomplete: "postal-code"
+    classes: "govuk-!-width-three-quarters",
+    id: "full-name",
+    name: "full-name",
+    autocomplete: "name"
   }) }}
 
-  {{ govukButton({
-    text: "Continue"
-  }) }}
+  <div class="govuk-button-group">
+    {{ govukButton({
+      text: "Save and continue"
+    }) }}
+  
+    {{ govukButton({
+      text: "Save and exit",
+      classes: "govuk-button--secondary"
+    }) }}
+  </div>
+  
 </form>
 
   </div>
