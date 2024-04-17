@@ -7,7 +7,7 @@
 {% block header %}
 {{ govukHeader({
   homepageUrl: "#",
-  serviceName: "Apply to bring immediate family to the UK (Afghan citizens)",
+  serviceName: "Apply to bring immediate family to the UK (Afghan Citizens Resettlement Scheme)",
   serviceUrl: "#",
   navigation: [
    
@@ -47,7 +47,7 @@
 
 <br>
 
-<p class="govuk-body">Choose an adult that will be responsible for the children if they need to travel to a Visa Assessment Centre.</p>
+<p class="govuk-body">Who is responsible for the children if they travel to a Visa Assessment Centre?</p>
 
 <br>
 <br>
@@ -59,10 +59,10 @@
       <div class="govuk-radios__item">
         <input class="govuk-radios__input" id="contact" name="contact" type="radio" value="email" data-aria-controls="conditional-contact">
         <label class="govuk-label govuk-radios__label" for="contact">
-          Me
+          {{data ['full-name']}}
         </label>
         <div id="signIn-2-item-hint" class="govuk-hint govuk-radios__hint">
-          You will leave the UK to travel with your children 
+          {{data ['full-name']}} will leave the UK to travel with the children 
         </div>
       </div>
 

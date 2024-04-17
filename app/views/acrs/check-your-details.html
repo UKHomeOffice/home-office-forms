@@ -7,7 +7,7 @@
 {% block header %}
 {{ govukHeader({
   homepageUrl: "#",
-  serviceName: "Apply to bring immediate family to the UK (Afghan citizens)",
+  serviceName: "Apply to bring immediate family to the UK (Afghan Citizens Resettlement Scheme)",
   serviceUrl: "#",
   navigation: [
    
@@ -42,7 +42,7 @@
     <div class="govuk-grid-column-two-thirds">
 
       <h1 class="govuk-heading-xl">
-        Check your details
+        Check your application
       </h1>
 
       <h2 class="govuk-heading-m">
@@ -96,7 +96,7 @@
   
   <div class="govuk-summary-list__row">
     <dt class="govuk-summary-list__key">
-      Is this John Smith's email address?
+      Is this {{data ['full-name']}}'s email address?
     </dt>
     <dd class="govuk-summary-list__value">
       Value
@@ -214,7 +214,7 @@
   </div>
   <div class="govuk-summary-list__row">
     <dt class="govuk-summary-list__key">
-      Living situation
+      Partner's living situation
     </dt>
     <dd class="govuk-summary-list__value">
       Value
@@ -299,7 +299,7 @@
   
   <div class="govuk-summary-list__row">
     <dt class="govuk-summary-list__key">
-      Living situation
+      Child's living situation
     </dt>
     <dd class="govuk-summary-list__value">
       Value
@@ -437,7 +437,7 @@
   
   <div class="govuk-summary-list__row">
     <dt class="govuk-summary-list__key">
-      Living situation
+      Child's living situation
     </dt>
     <dd class="govuk-summary-list__value">
       Value
@@ -530,7 +530,7 @@
 <br>
 
 <h3 class="govuk-heading-m">
-        Additional person
+        Other family member
         <a class="govuk-link-heading" href="#">Remove<span class="govuk-visually-hidden">remove</span></a>
       </h3>
 
@@ -589,7 +589,7 @@
   
   <div class="govuk-summary-list__row">
     <dt class="govuk-summary-list__key">
-      Their living situation
+      Person's living situation
     </dt>
     <dd class="govuk-summary-list__value">
       Value
