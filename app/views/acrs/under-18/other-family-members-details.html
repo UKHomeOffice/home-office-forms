@@ -1,0 +1,165 @@
+{% extends "layouts/main.html" %}
+
+{% block pageTitle %}
+  Apply to bring family to the UK (Afghan citizens) – {{ serviceName }} – GOV.UK Prototype Kit
+{% endblock %}
+
+{% block header %}
+{{ govukHeader({
+  homepageUrl: "#",
+  serviceName: "Apply to bring immediate family to the UK (Afghan Citizens Resettlement Scheme)",
+  serviceUrl: "#",
+  navigation: [
+   
+  ]
+}) }}
+{% endblock %}
+
+{% block beforeContent %}
+
+
+<div class="govuk-phase-banner">
+  <p class="govuk-phase-banner__content">
+    <strong class="govuk-tag govuk-phase-banner__content__tag">
+      BETA
+    </strong>
+    <span class="govuk-phase-banner__text">
+      This is a new service – your <a class="govuk-link" href="#">feedback</a> will help us to improve it.
+    </span>
+  </p>
+</div>
+
+{% endblock %}
+
+{% block content %}
+
+<a href="do-you-want-to-apply-to-bring-other-family-members-to-the-uk" class="govuk-back-link">Back</a>
+
+<br>
+<br>
+
+  <div class="govuk-form-group">
+  <h1 class="govuk-label-wrapper">
+    <label class="govuk-label govuk-label--l" for="event-name">
+      Other family member's details
+    </label>
+  </h1>
+
+<br>
+
+<form action="/afm-router" method="post">
+
+  <div class="govuk-form-group">
+    <label class="govuk-label" for="partners-name">
+      Full name
+    </label>
+    <input class="govuk-input govuk-!-width-three-quarters" id="partners-name" name="partnersName" type="text">
+  </div>
+
+  <div class="govuk-form-group">
+    <label class="govuk-label" for="partners-number">
+      Family member's telephone number (optional)
+    </label>
+    <div id="event-name-hint" class="govuk-hint">
+      For international numbers include the country code
+    </div>
+    <input class="govuk-input govuk-!-width-one-half" id="partners-number" name="partnersNumber" type="number">
+  </div>
+
+  <div class="govuk-form-group">
+    <label class="govuk-label" for="partners-date-of-birth">
+      Family member's date of birth
+    </label>
+
+      <div id="passport-issued-hint" class="govuk-hint">
+        For example, 27 3 2007
+      </div>
+      <div class="govuk-date-input" id="passport-issued">
+        <div class="govuk-date-input__item">
+          <div class="govuk-form-group">
+            <label class="govuk-label govuk-date-input__label" for="passport-issued-day">
+              Day
+            </label>
+            <input class="govuk-input govuk-date-input__input govuk-input--width-2" id="passport-issued-day" name="passport-issued-day" type="text" inputmode="numeric">
+          </div>
+        </div>
+        <div class="govuk-date-input__item">
+          <div class="govuk-form-group">
+            <label class="govuk-label govuk-date-input__label" for="passport-issued-month">
+              Month
+            </label>
+            <input class="govuk-input govuk-date-input__input govuk-input--width-2" id="passport-issued-month" name="passport-issued-month" type="text" inputmode="numeric">
+          </div>
+        </div>
+        <div class="govuk-date-input__item">
+          <div class="govuk-form-group">
+            <label class="govuk-label govuk-date-input__label" for="passport-issued-year">
+              Year
+            </label>
+            <input class="govuk-input govuk-date-input__input govuk-input--width-4" id="birth-year" name="birth-year" type="number" inputmode="numeric">
+          </div>
+        </div>
+      </div>
+    </fieldset>
+  </div>
+
+  <div class="govuk-form-group">
+    <label class="govuk-label" for="partners-address">
+      Family member's current address
+    </label>
+    <div id="event-name-hint" class="govuk-hint">
+      If they have no fixed address, enter somewhere we can send post
+    </div>
+    <textarea class="govuk-textarea" id="partners-address" name="partners-address" rows="5"></textarea>
+  </div>
+
+  <div class="govuk-form-group">
+    <label class="govuk-label" for="partners-address-situation">
+      Family member's living situation
+    </label>
+    <div id="event-name-hint" class="govuk-hint">
+      For example, who they are living with, their relationship to who they are living with and how long they have lived there
+    </div>
+    <textarea class="govuk-textarea" id="partners-address-situation" name="partners-address-situation" rows="5"></textarea>
+  </div>
+
+        <br>
+
+        <div class="govuk-form-group">
+    <label class="govuk-label" for="partners-evacuation">
+      Why were you not evacuated with this person?
+    </label>
+    <textarea class="govuk-textarea" id="partners-evacuation" name="partners-evacuation" rows="5"></textarea>
+  </div>
+
+  <div class="govuk-form-group">
+    <label class="govuk-label" for="partners-address-situation">
+      Why are you applying to bring them to the UK?
+    </label>
+    <div id="event-name-hint" class="govuk-hint">
+      Tell us if they rely on you for help with money, housing, food, healthcare or schooling. You must provide evidence for this later in this form.
+    </div>
+    <textarea class="govuk-textarea" id="partners-address-situation" name="partners-address-situation" rows="5"></textarea>
+  </div>
+
+  <br>
+  <br>
+
+  <div class="govuk-button-group">
+    {{ govukButton({
+      text: "Save and continue"
+    }) }}
+
+    {{ govukButton({
+      text: "Save and exit",
+      classes: "govuk-button--secondary"
+    }) }}
+  </div>
+
+</form>
+
+  </div>
+
+  </div>
+
+{% endblock %}

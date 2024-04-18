@@ -1,0 +1,64 @@
+{% extends "layouts/main.html" %}
+
+{% block pageTitle %}
+  Apply to bring family to the UK (Afghan citizens) – {{ serviceName }} – GOV.UK Prototype Kit
+{% endblock %}
+
+{% block header %}
+{{ govukHeader({
+  homepageUrl: "#",
+  serviceName: "Apply to bring immediate family to the UK (Afghan Citizens Resettlement Scheme)",
+  serviceUrl: "#",
+  navigation: [
+   
+  ]
+}) }}
+{% endblock %}
+
+{% block beforeContent %}
+
+
+<div class="govuk-phase-banner">
+  <p class="govuk-phase-banner__content">
+    <strong class="govuk-tag govuk-phase-banner__content__tag">
+      BETA
+    </strong>
+    <span class="govuk-phase-banner__text">
+      This is a new service – your <a class="govuk-link" href="#">feedback</a> will help us to improve it.
+    </span>
+  </p>
+</div>
+
+{% endblock %}
+
+{% block content %}
+
+<a href="enter-an-email-address" class="govuk-back-link">Back</a>
+
+<br>
+<br>
+
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+
+      <h1 class="govuk-heading-xl">
+        Check your email
+      </h1>
+
+    <p class="govuk-body">We have emailed a link to:</p>
+
+    <p class="govuk-body"><strong>joeBloggs@email.co.uk</strong></p>
+
+    <p class="govuk-body">Go to the email and follow the link to enter the form.</p>
+
+<br>
+
+<a href="#"
+<button type="submit" class="govuk-button" data-module="govuk-button">
+  Resend link
+</button>
+</a>
+
+  </div>
+
+{% endblock %}

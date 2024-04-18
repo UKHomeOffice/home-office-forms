@@ -1,0 +1,144 @@
+{% extends "layouts/main.html" %}
+
+{% block pageTitle %}
+  Apply to bring family to the UK (Afghan citizens) – {{ serviceName }} – GOV.UK Prototype Kit
+{% endblock %}
+
+{% block header %}
+{{ govukHeader({
+  homepageUrl: "#",
+  serviceName: "Apply to bring immediate family to the UK (Afghan Citizens Resettlement Scheme)",
+  serviceUrl: "#",
+  navigation: [
+   
+  ]
+}) }}
+{% endblock %}
+
+{% block beforeContent %}
+
+
+<div class="govuk-phase-banner">
+  <p class="govuk-phase-banner__content">
+    <strong class="govuk-tag govuk-phase-banner__content__tag">
+      BETA
+    </strong>
+    <span class="govuk-phase-banner__text">
+      This is a new service – your <a class="govuk-link" href="#">feedback</a> will help us to improve it.
+    </span>
+  </p>
+</div>
+
+{% endblock %}
+
+{% block content %}
+
+<a href="family-you-want-to-apply-to-bring-to-the-uk" class="govuk-back-link">Back</a>
+
+<br>
+<br>
+
+  <div class="govuk-form-group">
+  <h1 class="govuk-label-wrapper">
+    <label class="govuk-label govuk-label--l" for="event-name">
+      Child's details
+    </label>
+  </h1>
+
+<br>
+
+<div class="govuk-form-group">
+  <label class="govuk-label" for="partners-name">
+    Child's full name
+  </label>
+  <input class="govuk-input govuk-!-width-three-quarters" id="partners-name" name="partnersName" type="text">
+</div>
+
+<div class="govuk-form-group">
+  <label class="govuk-label" for="partners-date-of-birth">
+    Child's date of birth
+  </label>
+
+    <div id="passport-issued-hint" class="govuk-hint">
+      For example, 27 3 2007
+    </div>
+    <div class="govuk-date-input" id="passport-issued">
+      <div class="govuk-date-input__item">
+        <div class="govuk-form-group">
+          <label class="govuk-label govuk-date-input__label" for="passport-issued-day">
+            Day
+          </label>
+          <input class="govuk-input govuk-date-input__input govuk-input--width-2" id="passport-issued-day" name="passport-issued-day" type="text" inputmode="numeric">
+        </div>
+      </div>
+      <div class="govuk-date-input__item">
+        <div class="govuk-form-group">
+          <label class="govuk-label govuk-date-input__label" for="passport-issued-month">
+            Month
+          </label>
+          <input class="govuk-input govuk-date-input__input govuk-input--width-2" id="passport-issued-month" name="passport-issued-month" type="text" inputmode="numeric">
+        </div>
+      </div>
+      <div class="govuk-date-input__item">
+        <div class="govuk-form-group">
+          <label class="govuk-label govuk-date-input__label" for="passport-issued-year">
+            Year
+          </label>
+          <input class="govuk-input govuk-date-input__input govuk-input--width-4" id="passport-issued-year" name="passport-issued-year" type="text" inputmode="numeric">
+        </div>
+      </div>
+    </div>
+  </fieldset>
+</div>
+
+<div class="govuk-form-group">
+  <label class="govuk-label" for="partners-address">
+    Child's current address
+  </label>
+  <div id="event-name-hint" class="govuk-hint">
+    If they have no fixed address, enter somewhere we can send post
+  </div>
+  <textarea class="govuk-textarea" id="partners-address" name="partners-address" rows="5"></textarea>
+</div>
+
+<div class="govuk-form-group">
+  <label class="govuk-label" for="partners-address-situation">
+    Child's living situation
+  </label>
+  <div id="event-name-hint" class="govuk-hint">
+    For example, who they are living with, their relationship to who they are living with and how long they have lived there
+  </div>
+  <textarea class="govuk-textarea" id="partners-address-situation" name="partners-address-situation" rows="5"></textarea>
+</div>
+
+  <br>
+
+      <br>
+
+      <div class="govuk-form-group">
+  <label class="govuk-label" for="partners-evacuation">
+    Why was this child not evacuated with you?
+  </label>
+  <textarea class="govuk-textarea" id="partners-evacuation" name="partners-evacuation" rows="5"></textarea>
+</div>
+
+<br>
+<br>
+
+<a href="family-you-want-to-apply-to-bring-to-the-uk-2"
+<button type="submit" class="govuk-button" data-module="govuk-button">
+  Save and continue
+</button>
+</a>
+
+&nbsp;&nbsp;
+
+<button type="submit" class="govuk-button govuk-button--secondary" data-module="govuk-button">
+  Save and exit
+</button>
+
+  </div>
+
+  </div>
+
+{% endblock %}

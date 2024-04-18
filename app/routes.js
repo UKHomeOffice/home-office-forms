@@ -29,8 +29,8 @@ router.post('/who', function(request, response) {
 
 router.all('/afm-router', function (req, res, next) {
     if ((req.session.data['birth-year'] >= 2007)) {
-      return res.redirect('/acrs/who-is-responsible-for-this-child');
+      return res.redirect('/acrs/under-18/who-is-responsible-for-this-child');
       next();
     } else {
-      return (res.redirect('/acrs/family-you-want-to-apply-to-bring-to-the-uk-3'))
+      return (res.redirect('/acrs/under-18/family-you-want-to-apply-to-bring-to-the-uk-3'))
     }})

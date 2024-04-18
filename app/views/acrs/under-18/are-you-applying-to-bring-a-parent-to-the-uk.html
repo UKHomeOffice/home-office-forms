@@ -1,0 +1,97 @@
+{% extends "layouts/main.html" %}
+
+{% block pageTitle %}
+  Apply to bring family to the UK (Afghan citizens) – {{ serviceName }} – GOV.UK Prototype Kit
+{% endblock %}
+
+{% block header %}
+{{ govukHeader({
+  homepageUrl: "#",
+  serviceName: "Apply to bring immediate family to the UK (Afghan Citizens Resettlement Scheme)",
+  serviceUrl: "#",
+  navigation: [
+   
+  ]
+}) }}
+{% endblock %}
+
+{% block beforeContent %}
+
+
+<div class="govuk-phase-banner">
+  <p class="govuk-phase-banner__content">
+    <strong class="govuk-tag govuk-phase-banner__content__tag">
+      BETA
+    </strong>
+    <span class="govuk-phase-banner__text">
+      This is a new service – your <a class="govuk-link" href="#">feedback</a> will help us to improve it.
+    </span>
+  </p>
+</div>
+
+{% endblock %}
+
+{% block content %}
+
+<a href="what-is-your-address" class="govuk-back-link">Back</a>
+
+<br>
+<br>
+
+  <div class="govuk-form-group">
+  <h1 class="govuk-label-wrapper">
+    <label class="govuk-label govuk-label--l" for="event-name">
+      Are you applying to bring a parent to the UK?
+    </label>
+  </h1>
+
+<br>
+
+<div id="event-name-hint" class="govuk-hint">
+    You can only apply to bring your biological parents to the UK
+  </div>
+
+<div class="govuk-form-group">
+  <fieldset class="govuk-fieldset" aria-describedby="contact-hint">
+    
+    <div class="govuk-radios" data-module="govuk-radios">
+      <div class="govuk-radios__item">
+        <input class="govuk-radios__input" id="partner" name="partner" type="radio" value="yes">
+        <label class="govuk-label govuk-radios__label" for="partner">
+          Yes
+        </label>
+      </div>
+      
+      <div class="govuk-radios__item">
+        <input class="govuk-radios__input" id="partner-2" name="partner" type="radio" value="no">
+        <label class="govuk-label govuk-radios__label" for="partner-2">
+          No
+        </label>
+      </div>
+      
+      
+    </div>
+  </fieldset>
+</div>
+
+</div>
+
+<br>
+
+<a href="parents-details"
+<button type="submit" class="govuk-button" data-module="govuk-button">
+  Save and continue
+</button>
+</a>
+
+&nbsp;&nbsp;
+
+<button type="submit" class="govuk-button govuk-button--secondary" data-module="govuk-button">
+  Save and exit
+</button>
+
+  </div>
+
+  </div>
+
+{% endblock %}

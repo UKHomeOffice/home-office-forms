@@ -1,0 +1,104 @@
+{% extends "layouts/main.html" %}
+
+{% block pageTitle %}
+  Apply to bring family to the UK (Afghan citizens) – {{ serviceName }} – GOV.UK Prototype Kit
+{% endblock %}
+
+{% block header %}
+{{ govukHeader({
+  homepageUrl: "#",
+  serviceName: "Apply to bring immediate family to the UK (Afghan Citizens Resettlement Scheme)",
+  serviceUrl: "#",
+  navigation: [
+   
+  ]
+}) }}
+{% endblock %}
+
+{% block beforeContent %}
+
+
+<div class="govuk-phase-banner">
+  <p class="govuk-phase-banner__content">
+    <strong class="govuk-tag govuk-phase-banner__content__tag">
+      BETA
+    </strong>
+    <span class="govuk-phase-banner__text">
+      This is a new service – your <a class="govuk-link" href="#">feedback</a> will help us to improve it.
+    </span>
+  </p>
+</div>
+
+{% endblock %}
+
+{% block content %}
+
+<a href="can-you-provide-a-telephone-number" class="govuk-back-link">Back</a>
+
+<br>
+<br>
+
+  <div class="govuk-form-group">
+  <h1 class="govuk-label-wrapper">
+    <label class="govuk-label govuk-label--l" for="event-name">
+      What is your address?
+    </label>
+  </h1>
+  <div id="event-name-hint" class="govuk-hint govuk-!-width-three-quarters">
+    If you have no fixed address, enter an address we can use to contact you.
+  </div>
+
+  <br>
+  
+  <fieldset class="govuk-fieldset">
+  
+  <div class="govuk-form-group govuk-!-width-three-quarters">
+    <label class="govuk-label" for="address-line-1">
+      Address line 1
+    </label>
+    <input class="govuk-input" id="address-line-1" name="addressLine1" type="text" autocomplete="address-line1">
+  </div>
+  <div class="govuk-form-group govuk-!-width-three-quarters">
+    <label class="govuk-label" for="address-line-2">
+      Address line 2 (optional)
+    </label>
+    <input class="govuk-input" id="address-line-2" name="addressLine2" type="text" autocomplete="address-line2">
+  </div>
+  <div class="govuk-form-group">
+    <label class="govuk-label" for="address-town">
+      Town or city
+    </label>
+    <input class="govuk-input govuk-!-width-two-thirds" id="address-town" name="addressTown" type="text" autocomplete="address-level2">
+  </div>
+  <div class="govuk-form-group">
+    <label class="govuk-label" for="address-county">
+      County (optional)
+    </label>
+    <input class="govuk-input govuk-!-width-two-thirds" id="address-county" name="addressCounty" type="text">
+  </div>
+  <div class="govuk-form-group">
+    <label class="govuk-label" for="address-postcode">
+      Postcode
+    </label>
+    <input class="govuk-input govuk-input--width-10" id="address-postcode" name="addressPostcode" type="text" autocomplete="postal-code">
+  </div>
+</fieldset>
+
+<br>
+<br>
+
+<a href="are-you-applying-to-bring-a-parent-to-the-uk"
+<button type="submit" class="govuk-button" data-module="govuk-button">
+  Save and continue
+</button>
+</a>
+
+&nbsp;&nbsp;
+
+<button type="submit" class="govuk-button govuk-button--secondary" data-module="govuk-button">
+  Save and exit
+</button>
+
+  </div>
+
+{% endblock %}

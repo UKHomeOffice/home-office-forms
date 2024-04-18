@@ -1,0 +1,111 @@
+{% extends "layouts/main.html" %}
+
+{% block pageTitle %}
+  Apply to bring family to the UK (Afghan citizens) – {{ serviceName }} – GOV.UK Prototype Kit
+{% endblock %}
+
+{% block header %}
+{{ govukHeader({
+  homepageUrl: "#",
+  serviceName: "Apply to bring immediate family to the UK (Afghan Citizens Resettlement Scheme)",
+  serviceUrl: "#",
+  navigation: [
+   
+  ]
+}) }}
+{% endblock %}
+
+{% block beforeContent %}
+
+
+<div class="govuk-phase-banner">
+  <p class="govuk-phase-banner__content">
+    <strong class="govuk-tag govuk-phase-banner__content__tag">
+      BETA
+    </strong>
+    <span class="govuk-phase-banner__text">
+      This is a new service – your <a class="govuk-link" href="#">feedback</a> will help us to improve it.
+    </span>
+  </p>
+</div>
+
+{% endblock %}
+
+{% block content %}
+
+<a href="family-members-that-live-in-the-uk" class="govuk-back-link">Back</a>
+
+<br>
+<br>
+
+  <div class="govuk-form-group">
+  <h1 class="govuk-label-wrapper">
+    <label class="govuk-label govuk-label--l" for="event-name">
+      Upload evidence
+    </label>
+  </h1>
+
+<br>
+
+<p class="govuk-body govuk-!-width-three-quarters">Adding evidence will support your application. You can add anything that you think is relevant. You can still submit your application without evidence.</p>
+
+  <div class="govuk-body">
+    Some examples of evidence might include:
+    <ul>
+      <li>Tazkira cards</li>
+      <li>passports</li>
+      <li>birth certificates</li>
+      <li>marriage certificates</li>
+      <li>adoption certificates</li>
+      <li>family photos</li>
+      <li>school reports</li>
+      <li>bank transfers between you and the family member</li>
+      <li>social media messages between you and the family member</li>
+      <li>medical records</li>
+    </ul>
+
+    We accept other types of evidence that are not in this list.
+  </div>
+</details>
+
+<br>
+
+<div class="govuk-form-group">
+  <label class="govuk-label" for="file-upload-1">
+    Upload a file
+  </label>
+  <input class="govuk-file-upload" id="file-upload-1" name="fileUpload1" type="file">
+</div>
+
+<br>
+<br>
+
+<h2 class="govuk-heading-m">No files uploaded</h2>
+
+<br>
+
+<p class="govuk-body">For evidence that is not in English, you must upload a translation.</p>
+
+<br>
+<br>
+<br>
+
+<a href="where-should-we-send-your-decision"
+<button type="submit" class="govuk-button" data-module="govuk-button">
+  Save and continue
+</button>
+</a>
+
+&nbsp;&nbsp;
+
+<button type="submit" class="govuk-button govuk-button--secondary" data-module="govuk-button">
+  Save and exit
+</button>
+
+</form>
+
+  </div>
+
+  </div>
+
+{% endblock %}

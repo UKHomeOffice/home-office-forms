@@ -1,0 +1,92 @@
+{% extends "layouts/main.html" %}
+
+{% block pageTitle %}
+  Apply to bring family to the UK (Afghan citizens) – {{ serviceName }} – GOV.UK Prototype Kit
+{% endblock %}
+
+{% block header %}
+{{ govukHeader({
+  homepageUrl: "#",
+  serviceName: "Apply to bring immediate family to the UK (Afghan Citizens Resettlement Scheme)",
+  serviceUrl: "#",
+  navigation: [
+   
+  ]
+}) }}
+{% endblock %}
+
+{% block beforeContent %}
+
+
+<div class="govuk-phase-banner">
+  <p class="govuk-phase-banner__content">
+    <strong class="govuk-tag govuk-phase-banner__content__tag">
+      BETA
+    </strong>
+    <span class="govuk-phase-banner__text">
+      This is a new service – your <a class="govuk-link" href="#">feedback</a> will help us to improve it.
+    </span>
+  </p>
+</div>
+
+{% endblock %}
+
+{% block content %}
+
+<a href="" class="govuk-back-link">Back</a>
+
+<br>
+<br>
+
+  <div class="govuk-form-group">
+  <h1 class="govuk-label-wrapper">
+    <label class="govuk-label govuk-label--l" for="event-name">
+      Helper's details
+    </label>
+  </h1>
+
+<br>
+
+<div class="govuk-form-group">
+  <label class="govuk-label" for="partners-name">
+    Helper's full name
+  </label>
+  <input class="govuk-input govuk-!-width-three-quarters" id="partners-name" name="partnersName" type="text">
+</div>
+
+<div class="govuk-form-group">
+  <label class="govuk-label" for="partners-name">
+    Helper's relationship to the applicant
+  </label>
+  <input class="govuk-input govuk-!-width-three-quarters" id="partners-name" name="partnersName" type="text">
+</div>
+
+<div class="govuk-form-group">
+  <label class="govuk-label" for="partners-name">
+    Organisation name (optional)
+  </label>
+  <input class="govuk-input govuk-!-width-three-quarters" id="partners-name" name="partnersName" type="text">
+</div>
+
+<p class="govuk-body govuk-!-width-three-quarters">Complete this form as if you are the applicant.</p>
+
+<br>
+<br>
+
+<a href="family-you-want-to-apply-to-bring-to-the-uk"
+<button type="submit" class="govuk-button" data-module="govuk-button">
+  Save and continue
+</button>
+</a>
+
+&nbsp;&nbsp;
+
+<button type="submit" class="govuk-button govuk-button--secondary" data-module="govuk-button">
+  Save and exit
+</button>
+
+  </div>
+
+  </div>
+
+{% endblock %}

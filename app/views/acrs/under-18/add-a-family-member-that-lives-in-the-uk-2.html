@@ -1,0 +1,147 @@
+{% extends "layouts/main.html" %}
+
+{% block pageTitle %}
+  Apply to bring family to the UK (Afghan citizens) – {{ serviceName }} – GOV.UK Prototype Kit
+{% endblock %}
+
+{% block header %}
+{{ govukHeader({
+  homepageUrl: "#",
+  serviceName: "Apply to bring immediate family to the UK (Afghan Citizens Resettlement Scheme)",
+  serviceUrl: "#",
+  navigation: [
+   
+  ]
+}) }}
+{% endblock %}
+
+{% block beforeContent %}
+
+
+<div class="govuk-phase-banner">
+  <p class="govuk-phase-banner__content">
+    <strong class="govuk-tag govuk-phase-banner__content__tag">
+      BETA
+    </strong>
+    <span class="govuk-phase-banner__text">
+      This is a new service – your <a class="govuk-link" href="#">feedback</a> will help us to improve it.
+    </span>
+  </p>
+</div>
+
+{% endblock %}
+
+{% block content %}
+
+<a href="family-members-that-live-in-the-uk" class="govuk-back-link">Back</a>
+
+<br>
+<br>
+
+  <div class="govuk-form-group">
+  <h1 class="govuk-label-wrapper">
+    <label class="govuk-label govuk-label--l" for="event-name">
+      Family member 2
+    </label>
+  </h1>
+
+<br>
+
+<div class="govuk-form-group">
+  <label class="govuk-label" for="partners-name">
+    Full name
+  </label>
+  <input class="govuk-input govuk-!-width-three-quarters" id="partners-name" name="partnersName" type="text">
+</div>
+
+<div class="govuk-form-group">
+  <label class="govuk-label" for="partners-number">
+    Family member's telephone number (optional)
+  </label>
+  <div id="event-name-hint" class="govuk-hint">
+    For international numbers include the country code
+  </div>
+  <input class="govuk-input govuk-!-width-one-half" id="partners-number" name="partnersNumber" type="number">
+</div>
+
+<div class="govuk-form-group">
+  <label class="govuk-label" for="partners-email">
+    Family member's email address (optional)
+  </label>
+  <input class="govuk-input govuk-!-width-three-quarters" id="partners-email" name="partnersEmail" type="text">
+</div>
+
+<div class="govuk-form-group">
+  <label class="govuk-label" for="partners-date-of-birth">
+    Family member's date of birth
+  </label>
+
+    <div id="passport-issued-hint" class="govuk-hint">
+      For example, 27 3 2007
+    </div>
+    <div class="govuk-date-input" id="date-of-birth">
+      <div class="govuk-date-input__item">
+        <div class="govuk-form-group">
+          <label class="govuk-label govuk-date-input__label" for="date-of-birth-day">
+            Day
+          </label>
+          <input class="govuk-input govuk-date-input__input govuk-input--width-2" id="date-of-birth-day" name="date-of-birth-day" type="text" inputmode="numeric">
+        </div>
+      </div>
+      <div class="govuk-date-input__item">
+        <div class="govuk-form-group">
+          <label class="govuk-label govuk-date-input__label" for="passport-issued-month">
+            Month
+          </label>
+          <input class="govuk-input govuk-date-input__input govuk-input--width-2" id="date-of-birth-month" name="date-of-birth-month" type="text" inputmode="numeric">
+        </div>
+      </div>
+      <div class="govuk-date-input__item">
+        <div class="govuk-form-group">
+          <label class="govuk-label govuk-date-input__label" for="passport-issued-year">
+            Year
+          </label>
+          <input class="govuk-input govuk-date-input__input govuk-input--width-4" id="date-of-birth-year" name="date-of-birth-year" type="text" inputmode="numeric">
+        </div>
+      </div>
+    </div>
+  </fieldset>
+</div>
+
+<div class="govuk-form-group">
+  <label class="govuk-label" for="partners-email">
+    Family member's relationship to you
+  </label>
+  <input class="govuk-input govuk-!-width-three-quarters" id="partners-email" name="partnersEmail" type="text">
+</div>
+
+<div class="govuk-form-group">
+  <label class="govuk-label" for="partners-address">
+    Family member's current address
+  </label>
+  <div id="event-name-hint" class="govuk-hint">
+    If they have no fixed address, enter somewhere we can send post
+  </div>
+  <textarea class="govuk-textarea" id="partners-address" name="partners-address" rows="5"></textarea>
+</div>
+
+<br>
+<br>
+
+<a href="family-members-that-live-in-the-uk-2"
+<button type="submit" class="govuk-button" data-module="govuk-button">
+  Save and continue
+</button>
+</a>
+
+&nbsp;&nbsp;
+
+<button type="submit" class="govuk-button govuk-button--secondary" data-module="govuk-button">
+  Save and exit
+</button>
+
+  </div>
+
+  </div>
+
+{% endblock %}

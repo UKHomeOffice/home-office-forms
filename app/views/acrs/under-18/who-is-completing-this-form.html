@@ -1,0 +1,95 @@
+{% extends "layouts/main.html" %}
+
+{% block pageTitle %}
+  Apply to bring family to the UK (Afghan citizens) – {{ serviceName }} – GOV.UK Prototype Kit
+{% endblock %}
+
+{% block header %}
+{{ govukHeader({
+  homepageUrl: "#",
+  serviceName: "Apply to bring immediate family to the UK (Afghan Citizens Resettlement Scheme)",
+  serviceUrl: "#",
+  navigation: [
+   
+  ]
+}) }}
+{% endblock %}
+
+{% block beforeContent %}
+
+
+<div class="govuk-phase-banner">
+  <p class="govuk-phase-banner__content">
+    <strong class="govuk-tag govuk-phase-banner__content__tag">
+      BETA
+    </strong>
+    <span class="govuk-phase-banner__text">
+      This is a new service – your <a class="govuk-link" href="#">feedback</a> will help us to improve it.
+    </span>
+  </p>
+</div>
+
+{% endblock %}
+
+{% block content %}
+
+<a href="information-you-have-given-us" class="govuk-back-link">Back</a>
+
+<br>
+<br>
+
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+
+      <h1 class="govuk-heading-xl">
+        Who is completing this form?
+      </h1>
+
+    <form class="form" action="/who" method="post">
+
+{{ govukRadios({
+  name: "who",
+  value: data['who'],
+  fieldset: {
+  },
+  items: [
+    {
+      value: "The applicant",
+      text: "The applicant",
+      hint: {
+        text: "The person with family they want to bring to the UK"
+      }
+    },
+    {
+      value: "Someone helping the aaplicant",
+      text: "Someone helping the applicant",
+      hint: {
+        text: "For example, friends or family"
+      }
+    },
+    {
+      value: "An immigration advisor",
+      text: "An immigration advisor",
+      hint: {
+        text: "You must be authorised to act on behalf of the applicant"
+      }
+    }
+  ]
+}) }}
+
+<br>
+
+{{ govukButton({
+  text: "Continue"
+}) }}
+
+{{ govukButton({
+  text: "Save and exit",
+  classes: "govuk-button--secondary"
+}) }}
+
+</form>
+  </fieldset>
+
+
+{% endblock %}

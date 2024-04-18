@@ -1,0 +1,63 @@
+{% extends "layouts/main.html" %}
+
+{% block pageTitle %}
+  Apply to bring family to the UK (Afghan citizens) – {{ serviceName }} – GOV.UK Prototype Kit
+{% endblock %}
+
+{% block header %}
+{{ govukHeader({
+  homepageUrl: "#",
+  serviceName: "Apply to bring immediate family to the UK (Afghan Citizens Resettlement Scheme)",
+  serviceUrl: "#",
+  navigation: [
+   
+  ]
+}) }}
+{% endblock %}
+
+{% block beforeContent %}
+
+
+<div class="govuk-phase-banner">
+  <p class="govuk-phase-banner__content">
+    <strong class="govuk-tag govuk-phase-banner__content__tag">
+      BETA
+    </strong>
+    <span class="govuk-phase-banner__text">
+      This is a new service – your <a class="govuk-link" href="#">feedback</a> will help us to improve it.
+    </span>
+  </p>
+</div>
+
+{% endblock %}
+
+{% block content %}
+
+<a href="enter-your-details-to-sign-in-brp" class="govuk-back-link">Back</a>
+
+<br>
+<br>
+
+  <div class="govuk-form-group">
+  <h1 class="govuk-label-wrapper">
+    <label class="govuk-label govuk-label--l" for="event-name">
+      Enter an email address
+    </label>
+  </h1>
+  <div id="event-name-hint" class="govuk-hint govuk-!-width-three-quarters">
+    We will email you a secure link, so you can save your information and return later. Enter an email address you can use in the future. 
+  </div>
+  <input class="govuk-input govuk-!-width-three-quarters" id="event-name" name="eventName" type="text" aria-describedby="event-name-hint">
+</div>
+
+<br>
+
+<a href="check-your-email"
+<button type="submit" class="govuk-button" data-module="govuk-button">
+  Send secure link
+</button>
+</a>
+
+  </div>
+
+{% endblock %}

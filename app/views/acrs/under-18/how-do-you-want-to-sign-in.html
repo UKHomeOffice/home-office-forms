@@ -1,0 +1,89 @@
+{% extends "layouts/main.html" %}
+
+{% block pageTitle %}
+  Apply to bring family to the UK (Afghan citizens) – {{ serviceName }} – GOV.UK Prototype Kit
+{% endblock %}
+
+{% block header %}
+{{ govukHeader({
+  homepageUrl: "#",
+  serviceName: "Apply to bring immediate family to the UK (Afghan Citizens Resettlement Scheme)",
+  serviceUrl: "#",
+  navigation: [
+   
+  ]
+}) }}
+{% endblock %}
+
+{% block beforeContent %}
+
+
+<div class="govuk-phase-banner">
+  <p class="govuk-phase-banner__content">
+    <strong class="govuk-tag govuk-phase-banner__content__tag">
+      BETA
+    </strong>
+    <span class="govuk-phase-banner__text">
+      This is a new service – your <a class="govuk-link" href="#">feedback</a> will help us to improve it.
+    </span>
+  </p>
+</div>
+
+{% endblock %}
+
+{% block content %}
+
+  <div class="govuk-form-group">
+  <h1 class="govuk-label-wrapper">
+    <label class="govuk-label govuk-label--l" for="event-name">
+      How do you want to sign in?
+    </label>
+  </h1>
+
+<br>
+
+<p class="govuk-body govuk-!-width-three-quarters">You can use a biometric residence permit (BRP) number or a unique application number to sign in to this form.</p>
+
+<br>
+<form class="form" action="/signin" method="post">
+
+{{ govukRadios({
+  name: "signin",
+  value: data['signin'],
+  fieldset: {
+  },
+  items: [
+    {
+      value: "BRP",
+      text: "Using a biometric residence permit (BRP) number",
+      hint: {
+        text: "For example, 'RZ123456'"
+      }
+    },
+    {
+      value: "UAN",
+      text: "Using a unique application number",
+      hint: {
+        text: "For example,'1234-1234-1234-1234'"
+      }
+    }
+  ]
+}) }}
+
+<br>
+<br>
+
+{{ govukButton({
+  text: "Continue"
+}) }}
+
+{{ govukButton({
+  text: "Save and exit",
+  classes: "govuk-button--secondary"
+}) }}
+
+</form>
+
+</div>
+
+{% endblock %}
