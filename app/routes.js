@@ -32,5 +32,5 @@ router.all('/afm-router', function (req, res, next) {
       return res.redirect('/who-is-responsible-for-this-child');
       next();
     } else {
-      return (res.redirect('/family-you-want-to-apply-to-bring-to-the-uk-3'))
+      return (res.redirect('family-you-want-to-apply-to-bring-to-the-uk-3'))
     }})
