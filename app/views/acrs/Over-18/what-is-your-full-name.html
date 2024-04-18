@@ -38,7 +38,7 @@
 <br>
 <br>
 
-<form action="/acrs/is-this-full-names-email-address" method="post">
+<form action="is-this-full-names-email-address" method="post">
   {{ govukInput({
     label: {
       text: "What is your full name?",
@@ -50,6 +50,8 @@
     name: "full-name",
     autocomplete: "name"
   }) }}
+
+  <br>
 
   <div class="govuk-button-group">
     {{ govukButton({
