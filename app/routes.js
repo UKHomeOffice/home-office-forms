@@ -17,16 +17,6 @@ router.post('/signin', function(request, response) {
     }
 })
 
-router.post('/who', function(request, response) {
-
-    var who = request.session.data['who']
-    if (who == "The applicant"){
-        response.redirect("/acrs/over-18/what-is-your-full-name")
-    } else if (req.session.data['who'] === 'Someone helping the applicant') {
-        response.redirect("")
-    }
-})
-
 router.all('/afm-router', function (req, res, next) {
     if ((req.session.data['birth-year'] >= 2007)) {
       return res.redirect('/acrs/under-18/who-is-responsible-for-this-child');
