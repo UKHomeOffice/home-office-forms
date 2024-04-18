@@ -33,42 +33,54 @@
 
 {% block content %}
 
-<a href="add-childs-details-2" class="govuk-back-link">Back</a>
+<a href="family-in-your-application-parent-2" class="govuk-back-link">Back</a>
 
 <br>
 <br>
 
-<h1 class="govuk-heading-xl">
-        Who is responsible for this child?
-      </h1>
+  <div class="govuk-form-group">
+  <h1 class="govuk-label-wrapper">
+    <label class="govuk-label govuk-label--l" for="event-name">
+      Are you applying to bring a brother or sister to the UK?
+    </label>
+  </h1>
+
+<br>
+
+<div id="event-name-hint" class="govuk-hint">
+    You can only apply for siblings that your parents are responsible for
+  </div>
 
 <div class="govuk-form-group">
-  <fieldset class="govuk-fieldset" aria-describedby="responsible-hint">
-
-    <br>
+  <fieldset class="govuk-fieldset" aria-describedby="contact-hint">
     
-    <div class="govuk-checkboxes" data-module="govuk-checkboxes">
-      <div class="govuk-checkboxes__item">
-        <input class="govuk-checkboxes__input" id="responsible" name="responsible" type="checkbox" value="carcasses">
-        <label class="govuk-label govuk-checkboxes__label" for="responsible">
-          {{data['full-name']}}
+    <div class="govuk-radios" data-module="govuk-radios">
+      <div class="govuk-radios__item">
+        <input class="govuk-radios__input" id="partner" name="partner" type="radio" value="yes">
+        <label class="govuk-label govuk-radios__label" for="partner">
+          Yes
         </label>
       </div>
-      <div class="govuk-checkboxes__item">
-        <input class="govuk-checkboxes__input" id="responsible-2" name="responsible" type="checkbox" value="mines">
-        <label class="govuk-label govuk-checkboxes__label" for="responsible-2">
-          Someone else
+      
+      <div class="govuk-radios__item">
+        <input class="govuk-radios__input" id="partner-2" name="partner" type="radio" value="no">
+        <label class="govuk-label govuk-radios__label" for="partner-2">
+          No
         </label>
       </div>
+      
+      
     </div>
   </fieldset>
 </div>
 
+</div>
+
 <br>
 
-<a href="guardians-details-2"
+<a href="siblings-details"
 <button type="submit" class="govuk-button" data-module="govuk-button">
-  Continue
+  Save and continue
 </button>
 </a>
 

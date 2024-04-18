@@ -7,7 +7,7 @@
 {% block header %}
 {{ govukHeader({
   homepageUrl: "#",
-  serviceName: "Apply to bring immediate family to the UK (Afghan citizens)",
+  serviceName: "Apply to bring immediate family to the UK (Afghan Citizens Resettlement Scheme)",
   serviceUrl: "#",
   navigation: [
    
@@ -33,7 +33,7 @@
 
 {% block content %}
 
-<a href="who-is-responsible-for-this-child" class="govuk-back-link">Back</a>
+<a href="family-in-your-application-parent-sibling" class="govuk-back-link">Back</a>
 
 <br>
 <br>
@@ -41,28 +41,28 @@
   <div class="govuk-form-group">
   <h1 class="govuk-label-wrapper">
     <label class="govuk-label govuk-label--l" for="event-name">
-      Guardian's details
+      Sibling's details
     </label>
   </h1>
 
-<p class="govuk-body govuk-!-width-three-quarters">Tell us about the person who is legally responsible for this child. This can be their biological parent or adopted parents.</p>
+  <p class="govuk-body">Enter your sibling’s details. You can add more siblings after this step.</p>
 
 <br>
 
 <div class="govuk-form-group">
   <label class="govuk-label" for="partners-name">
-    Guardian's full name
+    Sibling's full name
   </label>
   <input class="govuk-input govuk-!-width-three-quarters" id="partners-name" name="partnersName" type="text">
 </div>
 
 <div class="govuk-form-group">
   <label class="govuk-label" for="partners-date-of-birth">
-    Guardian's date of birth
+    Sibling's date of birth
   </label>
 
     <div id="passport-issued-hint" class="govuk-hint">
-      For example, 27 3 1990
+      For example, 27 3 1908
     </div>
     <div class="govuk-date-input" id="passport-issued">
       <div class="govuk-date-input__item">
@@ -94,34 +94,38 @@
 </div>
 
 <div class="govuk-form-group">
-  <label class="govuk-label" for="partners-support">
-    Is anyone else responsible for this child?
+  <label class="govuk-label" for="partners-address">
+    Sibling's current address
   </label>
+  <div id="event-name-hint" class="govuk-hint">
+    If they have no fixed address, enter somewhere we can send post
+  </div>
+  <textarea class="govuk-textarea" id="partners-address" name="partners-address" rows="5"></textarea>
+</div>
 
+<div class="govuk-form-group">
+  <label class="govuk-label" for="partners-address-situation">
+    Sibling's living situation
+  </label>
+  <div id="event-name-hint" class="govuk-hint">
+    For example, who they are living with, their relationship to who they are living with and how long they have lived there
+  </div>
+  <textarea class="govuk-textarea" id="partners-address-situation" name="partners-address-situation" rows="5"></textarea>
+</div>
 
-  <br>
-
-  <div class="govuk-radios" data-module="govuk-radios">
-      <div class="govuk-radios__item">
-        <input class="govuk-radios__input" id="partner" name="partner" type="radio" value="yes">
-        <label class="govuk-label govuk-radios__label" for="partner">
-          Yes
-        </label>
-      </div>
-      
-      <div class="govuk-radios__item">
-        <input class="govuk-radios__input" id="partner-2" name="partner" type="radio" value="no">
-        <label class="govuk-label govuk-radios__label" for="partner-2">
-          No
-        </label>
-      </div>
+<div class="govuk-form-group">
+  <label class="govuk-label" for="partners-evacuation">
+    Why were you evacuated without this sibling?
+  </label>
+  <textarea class="govuk-textarea" id="partners-evacuation" name="partners-evacuation" rows="5"></textarea>
+</div>
 
 <br>
 <br>
 
-<a href="family-you-want-to-apply-to-bring-to-the-uk"
+<a href="family-in-your-application-parent-sibling-2"
 <button type="submit" class="govuk-button" data-module="govuk-button">
-  Continue
+  Save and continue
 </button>
 </a>
 
