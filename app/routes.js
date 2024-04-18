@@ -26,4 +26,11 @@ router.post('/who', function(request, response) {
         response.redirect("")
     }
 })
- 
+
+router.all('/afm-router', function (req, res, next) {
+    if ((req.session.data['birth-year'] >= 2007)) {
+      return res.redirect('/under-18');
+      next();
+    } else {
+      return (res.redirect('/over-18'))
+    }})
