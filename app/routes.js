@@ -11,9 +11,9 @@ router.post('/signin', function(request, response) {
 
     var signin = request.session.data['signin']
     if (signin == "BRP"){
-        response.redirect("/acrs/over-18/enter-your-details-to-sign-in-brp")
+        response.redirect("/acrs/Over-18/enter-your-details-to-sign-in-brp")
     } else {
-        response.redirect("/acrs/over-18/enter-your-details-to-sign-in-uan")
+        response.redirect("/acrs/Over-18/enter-your-details-to-sign-in-uan")
     }
 })
 
