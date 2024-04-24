@@ -1,0 +1,157 @@
+{% extends "layouts/main.html" %}
+
+{% block pageTitle %}
+Refer immediate family to come to the UK (Afghan citizens) – {{ serviceName }} – GOV.UK Prototype Kit
+{% endblock %}
+
+{% block header %}
+{{ govukHeader({
+  homepageUrl: "#",
+  serviceName: "Refer immediate family to come to the UK (Afghan Citizens Resettlement Scheme)",
+  serviceUrl: "#",
+  navigation: [
+   
+  ]
+}) }}
+{% endblock %}
+
+{% block beforeContent %}
+
+
+<div class="govuk-phase-banner">
+  <p class="govuk-phase-banner__content">
+    <strong class="govuk-tag govuk-phase-banner__content__tag">
+      BETA
+    </strong>
+    <span class="govuk-phase-banner__text">
+      This is a new service – your <a class="govuk-link" href="#">feedback</a> will help us to improve it.
+    </span>
+  </p>
+</div>
+
+{% endblock %}
+
+{% block content %}
+
+<a href="who-is-completing-this-form-under-18" class="govuk-back-link">Back</a>
+
+<br>
+<br>
+
+  <div class="govuk-form-group">
+  <h1 class="govuk-label-wrapper">
+    <label class="govuk-label govuk-label--l" for="event-name">
+      Immigration adviser's details
+    </label>
+  </h1>
+
+<br>
+
+<div class="govuk-form-group">
+  <label class="govuk-label" for="partners-name">
+    Immigration adviser's full name
+  </label>
+  <input class="govuk-input govuk-!-width-three-quarters" id="partners-name" name="partnersName" type="text">
+</div>
+
+<div class="govuk-form-group">
+  <label class="govuk-label" for="partners-name">
+    Organisation or law firm
+  </label>
+  <input class="govuk-input govuk-!-width-three-quarters" id="partners-name" name="partnersName" type="text">
+</div>
+
+<h3 class="govuk-heading-m">Postal address</h3>
+
+<div class="govuk-form-group">
+  <label class="govuk-label" for="partners-name">
+    Address line 1
+  </label>
+  <input class="govuk-input govuk-!-width-three-quarters" id="partners-name" name="partnersName" type="text">
+</div>
+
+<div class="govuk-form-group">
+  <label class="govuk-label" for="partners-name">
+    Address line 2 (optional)
+  </label>
+  <input class="govuk-input govuk-!-width-three-quarters" id="partners-name" name="partnersName" type="text">
+</div>
+
+<div class="govuk-form-group">
+  <label class="govuk-label" for="partners-name">
+    Town or city
+  </label>
+  <input class="govuk-input govuk-!-width-one-half" id="partners-name" name="partnersName" type="text">
+</div>
+
+<div class="govuk-form-group">
+  <label class="govuk-label" for="partners-name">
+    Postcode
+  </label>
+  <input class="govuk-input govuk-!-width-one-quarter" id="partners-name" name="partnersName" type="text">
+</div>
+
+<div class="govuk-form-group">
+  <label class="govuk-label" for="partners-name">
+    Telephone number
+  </label>
+  <div id="event-name-hint" class="govuk-hint">
+    For international numbers include the country code
+  </div>
+  <input class="govuk-input govuk-!-width-one-half" id="partners-name" name="partnersName" type="text">
+</div>
+
+<div class="govuk-form-group">
+  <fieldset class="govuk-fieldset" aria-describedby="contact-hint">    
+    <div class="govuk-radios" data-module="govuk-radios">
+      <div class="govuk-radios__item">
+        <input class="govuk-radios__input" id="contact" name="contact" type="radio" value="email" data-aria-controls="conditional-contact">
+        <label class="govuk-label govuk-radios__label" for="contact">
+          Yes
+        </label>
+      </div>
+      
+      <div class="govuk-radios__item">
+        <input class="govuk-radios__input" id="contact-2" name="contact" type="radio" value="phone" data-aria-controls="conditional-contact-2">
+        <label class="govuk-label govuk-radios__label" for="contact-2">
+          No
+        </label>
+      </div>
+      <div class="govuk-radios__conditional govuk-radios__conditional--hidden" id="conditional-contact-2">
+        <div class="govuk-form-group">
+          <label class="govuk-label" for="contact-by-phone">
+            Enter your email address
+          </label>
+          <input class="govuk-input govuk-!-width-two-thirds" id="contact-by-phone" name="contactByPhone" type="tel" autocomplete="tel">
+        </div>
+      </div>
+      
+    </div>
+  </fieldset>
+</div>
+
+<br>
+<br>
+
+<p class="govuk-body govuk-!-width-three-quarters">Complete this form as if you are the referrer.</p>
+
+<br>
+<br>
+
+<a href="what-is-your-full-name"
+<button type="submit" class="govuk-button" data-module="govuk-button">
+  Save and continue
+</button>
+</a>
+
+&nbsp;&nbsp;
+
+<button type="submit" class="govuk-button govuk-button--secondary" data-module="govuk-button">
+  Save and exit
+</button>
+
+  </div>
+
+  </div>
+
+{% endblock %}

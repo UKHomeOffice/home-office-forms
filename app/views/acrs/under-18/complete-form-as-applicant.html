@@ -1,7 +1,7 @@
 {% extends "layouts/main.html" %}
 
 {% block pageTitle %}
-Refer immediate family to come to the UK (Afghan citizens) – {{ serviceName }} – GOV.UK Prototype Kit
+  Refer immediate family to come to the UK (Afghan citizens) – {{ serviceName }} – GOV.UK Prototype Kit
 {% endblock %}
 
 {% block header %}
@@ -33,7 +33,7 @@ Refer immediate family to come to the UK (Afghan citizens) – {{ serviceName }}
 
 {% block content %}
 
-<a href="information-you-have-given-us" class="govuk-back-link">Back</a>
+<a href="helper-details" class="govuk-back-link">Back</a>
 
 <br>
 <br>
@@ -42,38 +42,14 @@ Refer immediate family to come to the UK (Afghan citizens) – {{ serviceName }}
     <div class="govuk-grid-column-two-thirds">
 
       <h1 class="govuk-heading-xl">
-        Who is completing this form?
+        You must complete the form as if you are the applicant
       </h1>
 
-    <form class="form" action="/whochild" method="post">
-
-{{ govukRadios({
-  name: "whochild",
-  value: data['whochild'],
-  fieldset: {
-  },
-  items: [
-    {
-      value: "Someone helping the referrer",
-      text: "Someone helping the referrer",
-      hint: {
-        text: "For example, friends or family"
-      }
-    },
-    {
-      value: "An immigration advisor",
-      text: "An immigration advisor",
-      hint: {
-        text: "You must be authorised to act on behalf of the referrer"
-      }
-    }
-  ]
-}) }}
+    <p class="govuk-body">If you are helping or an immigration adviser, you must complete this form as if you are the applicant.</p>
 
 <br>
-<br>
 
-<a href="helpers-details"
+<a href="#"
 <button type="submit" class="govuk-button" data-module="govuk-button">
   Save and continue
 </button>

@@ -32,3 +32,27 @@ router.all('/afm-router', function (req, res, next) {
         } else {
           return (res.redirect('/acrs/Over-18/family-you-want-to-apply-to-bring-to-the-uk-3'))
         }})
+
+        router.post('/who', function(request, response) {
+
+          var who = request.session.data['who']
+          if (who == "The referrer"){
+              response.redirect("acrs/Over-18/what-is-your-full-name")
+          } else if (who == "Someone helping the referrer"){
+              response.redirect("acrs/Over-18/helpers-details")
+          } else {
+            response.redirect("acrs/Over-18/#")
+          }
+      })
+
+      router.post('/whochild', function(request, response) {
+
+        var who = request.session.data['whochild']
+        if (who == "The referrer"){
+            response.redirect("acrs/Over-18/what-is-your-full-name")
+        } else if (who == "Someone helping the referrer"){
+            response.redirect("acrs/Over-18/helpers-details")
+        } else {
+          response.redirect("acrs/Over-18/#")
+        }
+    })
