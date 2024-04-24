@@ -41,18 +41,16 @@ router.all('/afm-router', function (req, res, next) {
           } else if (who == "Someone helping the referrer"){
               response.redirect("acrs/Over-18/helpers-details")
           } else {
-            response.redirect("acrs/Over-18/#")
+            response.redirect("acrs/Over-18/immigration-adviser-details")
           }
       })
 
       router.post('/whochild', function(request, response) {
 
-        var who = request.session.data['whochild']
-        if (who == "The referrer"){
-            response.redirect("acrs/Over-18/what-is-your-full-name")
-        } else if (who == "Someone helping the referrer"){
-            response.redirect("acrs/Over-18/helpers-details")
+        var whochild = request.session.data['whochild']
+        if (whochild == "Someone helping the referrer"){
+            response.redirect("/acrs/under-18/helpers-details")
         } else {
-          response.redirect("acrs/Over-18/#")
+          response.redirect("/acrs/under-18/immigration-adviser-details")
         }
     })

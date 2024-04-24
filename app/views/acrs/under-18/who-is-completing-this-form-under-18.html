@@ -73,17 +73,14 @@ Refer immediate family to come to the UK (Afghan citizens) – {{ serviceName }}
 <br>
 <br>
 
-<a href="helpers-details"
-<button type="submit" class="govuk-button" data-module="govuk-button">
-  Save and continue
-</button>
-</a>
+{{ govukButton({
+  text: "Continue"
+}) }}
 
-&nbsp;&nbsp;
-
-<button type="submit" class="govuk-button govuk-button--secondary" data-module="govuk-button">
-  Save and exit
-</button>
+{{ govukButton({
+  text: "Save and exit",
+  classes: "govuk-button--secondary"
+}) }}
 
   </div>
 
