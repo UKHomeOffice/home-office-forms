@@ -37,23 +37,35 @@
 <br>
 <br>
 
-  <div class="govuk-grid-row">
-    <div class="govuk-grid-column-two-thirds">
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-two-thirds"
 
       <h1 class="govuk-heading-xl">
         Sign in
       </h1>
 
-  <div class="govuk-form-group">
-  <h1 class="govuk-label-wrapper">
-    <label class="govuk-label govuk-label--l" for="event-name">
-      Biometric residence permit (BRP) number
-    </label>
-  </h1>
-  <div id="event-name-hint" class="govuk-hint">
-    For example, RZ123456
+    <div class="govuk-form-group">
+      <h1 class="govuk-label-wrapper">
+        <label class="govuk-label govuk-label--l" for="event-name">
+          Biometric residence permit (BRP) number
+        </label>
+      </h1>
+      <div id="event-name-hint" class="govuk-hint">
+        For example, RZ123456
+      </div>
+      <input class="govuk-input" id="event-name" name="eventName" type="text" aria-describedby="event-name-hint">
+    </div>
   </div>
-  <input class="govuk-input" id="event-name" name="eventName" type="text" aria-describedby="event-name-hint">
+
+  <div class="govuk-grid-column-one-third">
+      <h2 class="govuk-heading-s">
+        Where to find your BRP number
+      </h2>
+      <p class="govuk-body">BRP numbers are on the top right of the physical card, on the same side as the holder's photo.</p>
+      <img src="/public/images/card-example-xsmall.png" alt="" height="75%" width="75%">
+      <br>
+  </div>
+
 </div>
 
 <div class="govuk-grid-row">
