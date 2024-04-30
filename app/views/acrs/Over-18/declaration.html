@@ -1,0 +1,83 @@
+{% extends "layouts/main.html" %}
+
+{% block pageTitle %}
+  Refer immediate family to come to the UK (Afghan citizens) – {{ serviceName }} – GOV.UK Prototype Kit
+{% endblock %}
+
+{% block header %}
+{{ govukHeader({
+  homepageUrl: "#",
+  serviceName: "Refer immediate family to come to the UK (Afghan Citizens Resettlement Scheme)",
+  serviceUrl: "#",
+  navigation: [
+   
+  ]
+}) }}
+{% endblock %}
+
+{% block beforeContent %}
+
+
+<div class="govuk-phase-banner">
+  <p class="govuk-phase-banner__content">
+    <strong class="govuk-tag govuk-phase-banner__content__tag">
+      BETA
+    </strong>
+    <span class="govuk-phase-banner__text">
+      This is a new service – your <a class="govuk-link" href="#">feedback</a> will help us to improve it.
+    </span>
+  </p>
+</div>
+
+{% endblock %}
+
+{% block content %}
+
+<a href="check-your-details" class="govuk-back-link">Back</a>
+
+<br>
+<br>
+
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+
+      <h1 class="govuk-heading-xl">
+        Declaration
+      </h1>
+
+    <p class="govuk-body">If found eligible, the family members in your referral will need to travel to the nearest accessible Visa Application Centre.</p>
+    <p class="govuk-body"> If children in your referral are found eligible, they will need to make this journey with an adult. Children must not travel without an adult chaperone. </p>
+    <p class="govuk-body"> I acknowledge that:
+      <ul class="govuk-list govuk-list--bullet">
+        <li>children under the age of 18 must not travel without an adult chaperone</li>
+        <li>I can provide the Home Office with details of the adult who will accompany them up until the point at which they board a flight to the UK. We will contact you for this information at a later date.</li>
+      </ul>
+    </p>
+
+
+      <div class="govuk-checkboxes" data-module="govuk-checkboxes">
+        <div class="govuk-checkboxes__item">
+          <input class="govuk-checkboxes__input" id="waste" name="waste" type="checkbox" value="carcasses">
+          <label class="govuk-label govuk-checkboxes__label" for="waste">
+            I understand and agree with these statements
+          </label>
+        </div>
+      </div>
+
+<br>
+
+<a href="application-submitted"
+<button type="submit" class="govuk-button" data-module="govuk-button">
+  Submit referral
+</button>
+</a>
+
+&nbsp;&nbsp;
+
+<button type="submit" class="govuk-button govuk-button--secondary" data-module="govuk-button">
+  Exit
+</button>
+
+  </div>
+
+{% endblock %}
