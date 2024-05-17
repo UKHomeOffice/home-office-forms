@@ -32,12 +32,8 @@
  <div class="govuk-grid-row">
   <div class="govuk-grid-column-two-thirds">
       
-    <form class="form-handler" action="/landlord-details" method="post">
-      
-
-      {% from "govuk/components/input/macro.njk" import govukInput %}
-      {% from "govuk/components/fieldset/macro.njk" import govukFieldset %}
-      
+    <form class="form-handler" method="post">
+            
       {% call govukFieldset({
         legend: {
           text: "Rental property address",
@@ -102,7 +98,7 @@
 
       {{ govukButton({
         text: "Continue",
-        href: ""
+        href: "landlord-details"
       }) }}
     </form>
   
