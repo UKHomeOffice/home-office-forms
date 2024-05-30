@@ -4,9 +4,6 @@
 
 {% block content %}
 
-<!--<script>
-  window.location.href = "http://localhost:3000/make-a-report";
-</script>-->
 
 <div class="govuk-grid-row">
   <div class="govuk-grid-column-two-thirds">
@@ -17,7 +14,89 @@
       {{ serviceName }}
     </h1>
 
-    {% include "govuk-prototype-kit/includes/homepage-bottom.njk" %}
+    {% extends "layouts/main.html" %}
+
+{% set pageName="Home" %}
+
+
+{% block beforeContent %}
+
+{% endblock %}
+
+{% block content %}
+
+
+<h1 class="govuk-heading-l">
+  Address capture on HOF
+  <span class="govuk-caption-l" id="last-updated">
+    Last updated: 13/02/2024
+    </span>    
+</h1>
+
+<script>
+  const today = new Date();
+  const dateString = document.getElementById("last-updated").innerText.substr(14,10);
+  const [day, month, year] = dateString.split("/");
+  const dateObject = new Date (`${year}-${month}-${day}`)
+  const currentDate = new Date();
+  const timeDifference = currentDate - dateObject
+  const daysDifference = Math.floor(timeDifference / (1000 * 60 * 60 * 24));
+  const weeksDifference = Math.floor(daysDifference / 7);
+  const monthsDifference = Math.floor(daysDifference / 30);
+
+  let result;
+  if (daysDifference === 0) {
+    result = 'today';
+  } 
+  else if (daysDifference < 14) {
+    result = daysDifference + " day(s) ago";
+  } else if (weeksDifference < 4 ) {
+    result = weeksDifference + " weeks ago";
+  } else {
+    result = monthsDifference + " month(s) ago"
+  }
+  document.getElementById("last-updated").innerHTML = "Last updated: " + result
+</script>
+
+{{ govukTaskList({
+  idPrefix: "company-details",
+  items: [
+    {
+      title: {
+        text: "Prototype 1"
+      },
+      hint: {
+        text: "Includes country selector. Standard, structured address fields."
+      },
+      href: "#",
+      status: {
+        tag: {
+          text: "In build",
+          classes: "govuk-tag--blue"
+        }
+      }
+    },
+    {
+      title: {
+        text: "Prototype 2"
+      },
+      hint: {
+        text: ""
+      },
+      href: "#",
+      status: {
+        tag: {
+          text: "Coming soon",
+          classes: "govuk-tag--grey"
+        }
+      }
+    }
+  ]
+}) }}
+
+{% endblock %}
+
+
   </div>
 </div>
 
