@@ -10,3 +10,9 @@
     float: right;
     font-size: medium;
 }
+
+.custom-vertical-button-group {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}

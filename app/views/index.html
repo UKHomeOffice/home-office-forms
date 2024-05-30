@@ -8,8 +8,6 @@
 <div class="govuk-grid-row">
   <div class="govuk-grid-column-two-thirds">
 
-    {% include "govuk-prototype-kit/includes/homepage-top.njk" %}
-
     <h1 class="govuk-heading-xl">
       {{ serviceName }}
     <span class="govuk-caption-l" id="last-updated">
@@ -52,35 +50,35 @@
 </script>
 
 {{ govukTaskList({
-  idPrefix: "company-details",
+  idPrefix: "prototype-list",
   items: [
     {
       title: {
-        text: "Prototype 1"
+        text: "ACRS referral form"
       },
       hint: {
-        text: "Includes country selector. Standard, structured address fields."
+        text: "Eligibility form for the Afghan Citizens Resettlement Scheme"
       },
-      href: "#",
+      href: "/acrs-index",
       status: {
         tag: {
-          text: "In build",
-          classes: "govuk-tag--blue"
+          text: "Outdated",
+          classes: "govuk-tag--grey"
         }
       }
     },
     {
       title: {
-        text: "Prototype 2"
+        text: "TLF: Landlords Make a Report"
       },
       hint: {
-        text: ""
+        text: "Allows landlords to report illegal tenants (part of Top Level Forms migration)"
       },
-      href: "#",
+      href: "/lmar-index",
       status: {
         tag: {
-          text: "Coming soon",
-          classes: "govuk-tag--grey"
+          text: "Updated",
+          classes: "govuk-tag--green"
         }
       }
     }

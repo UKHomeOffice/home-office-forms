@@ -1,12 +1,13 @@
 {% extends "layouts/main.html" %}
 
 {% block pageTitle %}
-  Landlords Checking Service – {{ serviceName }} – GOV.UK Prototype Kit
+  Make a report – Landlords make a report – GOV.UK Prototype Kit
 {% endblock %}
 
 {% block header %}
-  <!-- Blank header with no service name for the start page -->
-  {{ govukHeader() }}
+  {{ govukHeader({
+    serviceName: "Landlords make a report"
+  }) }}
 {% endblock %}
 
 {% block beforeContent %}
@@ -29,7 +30,7 @@
     <div class="govuk-grid-column-two-thirds">
 
       <h1 class="govuk-heading-xl">
-        Landlords {{ serviceName.toLowerCase() }}
+        Landlords make a report
       </h1>
 
       <p>Use this service to tell us about someone who no longer has the right to rent.</p>
