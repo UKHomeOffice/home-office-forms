@@ -12,6 +12,9 @@
 
     <h1 class="govuk-heading-xl">
       {{ serviceName }}
+    <span class="govuk-caption-l" id="last-updated">
+      Last updated: 30/05/2024
+    </span>
     </h1>
 
     {% extends "layouts/main.html" %}
@@ -22,16 +25,6 @@
 {% block beforeContent %}
 
 {% endblock %}
-
-{% block content %}
-
-
-<h1 class="govuk-heading-l">
-  Address capture on HOF
-  <span class="govuk-caption-l" id="last-updated">
-    Last updated: 13/02/2024
-    </span>    
-</h1>
 
 <script>
   const today = new Date();
