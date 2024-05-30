@@ -51,4 +51,40 @@
   document.getElementById("last-updated").innerHTML = "Last updated: " + result
 </script>
 
+{{ govukTaskList({
+  idPrefix: "company-details",
+  items: [
+    {
+      title: {
+        text: "Prototype 1"
+      },
+      hint: {
+        text: "Includes country selector. Standard, structured address fields."
+      },
+      href: "#",
+      status: {
+        tag: {
+          text: "In build",
+          classes: "govuk-tag--blue"
+        }
+      }
+    },
+    {
+      title: {
+        text: "Prototype 2"
+      },
+      hint: {
+        text: ""
+      },
+      href: "#",
+      status: {
+        tag: {
+          text: "Coming soon",
+          classes: "govuk-tag--grey"
+        }
+      }
+    }
+  ]
+}) }}
+
 {% endblock %}
