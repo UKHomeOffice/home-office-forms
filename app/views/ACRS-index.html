@@ -15,9 +15,9 @@
 
 {% endblock %}
 
-<h1 class="govuk-heading-m">
-  Afghan Citizens Resettlement Scheme - Prototype
-  <span class="govuk-caption-m"> Last updated: May 2024</span>
+<h1 class="govuk-heading-l">
+  Afghan Citizens Resettlement Scheme
+  <span class="govuk-caption-l"> Prototype last updated: May 2024</span>
 </h1>
 
 <div class="govuk-button-group custom-vertical-button-group">
@@ -38,9 +38,51 @@
   </form>
 </div>
 
-<table class="govuk-table">
-  <caption class="govuk-table__caption govuk-table__caption--m govuk-!-margin-top-5">
+<br>
+
+
+
+<nav class="govuk-prototype-kit-common-templates-contents-list" aria-label="Pages in this guide" role="navigation">
+  <h2 class="govuk-heading-l">
+    Contents
+  </h2>
+  <ol class="govuk-prototype-kit-common-templates-contents-list__list">
+    <li class="govuk-prototype-kit-common-templates-contents-list__list-item govuk-prototype-kit-common-templates-contents-list__list-item--dashed govuk-prototype-kit-common-templates-contents-list__list-item--active">
+      <a href="#sign-in-process">
+        Sign in process
+      </a>
+    </li>
+    <a href="#over-18-pathway">
+      <li aria-current="true" class="govuk-prototype-kit-common-templates-contents-list__list-item govuk-prototype-kit-common-templates-contents-list__list-item--dashed">
+        Over 18 pathway
+      </li>
+    </a>
+    <li class="govuk-prototype-kit-common-templates-contents-list__list-item govuk-prototype-kit-common-templates-contents-list__list-item--dashed">
+      <a href="#under-18-pathway">
+        Under 18 pathway
+      </a>
+    </li>
+  </ol>
+</nav>
+
+<br>
+
+
+
+<div class="govuk-warning-text">
+  <span class="govuk-warning-text__icon" aria-hidden="true">!</span>
+  <strong class="govuk-warning-text__text">
+    <span class="govuk-visually-hidden">Warning</span>
+    Prototype is outdated. Refer to the <a href="https://www.figma.com/design/jMHoDVjllsSUJPeA2sp9ZP/ACRS---For-Sign-Off?node-id=0-1&t=s0y9HPoQ5nKq1OC6-1">handover Figma file</a>.
+  </strong>
+</div>
+
+<table class="govuk-table" id="sign-in-process">
+  <caption class="govuk-table__caption govuk-table__caption--l govuk-!-margin-top-5">
     Screen index
+  </caption>
+  <caption class="govuk-table__caption govuk-table__caption--m govuk-!-margin-top-5">
+    Sign in process
   </caption>
   <thead class="govuk-table__head">
     <tr class="govuk-table__row">
@@ -58,9 +100,624 @@
         Asks users whether they want to sign in using BRP number or UAN 
       </td>
     </tr>
+    <tr class="govuk-table__row">
+      <td class="govuk-table__cell">
+        <a href="acrs/Over-18/enter-your-details-to-sign-in-brp.html">Sign in with BRP number</a>
+      </td>
+      <td class="govuk-table__cell">
+        Asks users for BRP number and date of birth to sign in 
+      </td>
+    </tr>
+    <tr class="govuk-table__row">
+      <td class="govuk-table__cell">
+        <a href="acrs/Over-18/enter-your-details-to-sign-in-uan.html">Sign in with UAN</a>
+      </td>
+      <td class="govuk-table__cell">
+        Asks users for unique application number and date of birth to sign in 
+      </td>
+    </tr>
+    <tr class="govuk-table__row">
+      <td class="govuk-table__cell">
+        <a href="acrs/Over-18/enter-an-email-address.html">Enter an email address</a>
+      </td>
+      <td class="govuk-table__cell">
+        Asks users for an email address to send a magic link 
+      </td>
+    <tr class="govuk-table__row">
+      <td class="govuk-table__cell">
+        <a href="acrs/Over-18/check-your-email.html">Check your email</a>
+      </td>
+      <td class="govuk-table__cell">
+        Page that appears once the magic link has been sent 
+      </td>
+    </tr>
   </tbody>
 
 </table>
 
+<table class="govuk-table" id="over-18-pathway">
+  <caption class="govuk-table__caption govuk-table__caption--m govuk-!-margin-top-5">
+    Over 18 pathway
+  </caption>
+  <thead class="govuk-table__head">
+    <tr class="govuk-table__row">
+    <th scope="col" class="govuk-table__header">Screen</th>
+    <th scope="col" class="govuk-table__header">Description</th>
+    </tr>
+  </thead>
+
+  <tbody class="govuk-table__body">
+    <tr class="govuk-table__row">
+      <td class="govuk-table__cell">
+        <a href="acrs/Over-18/information-you-have-given-us.html">Information you have given us</a>
+      </td>
+      <td class="govuk-table__cell">
+        Page a first-time user sees after signing in 
+      </td>
+    </tr>
+
+    <tr class="govuk-table__row">
+      <td class="govuk-table__cell">
+        <a href="acrs/Over-18/which-form-do-you-need-to-continue.html">Which form do you need to continue?</a>
+      </td>
+      <td class="govuk-table__cell">
+        Page a user sees after signing in when they have multiple referrals linked to one email address  
+      </td>
+    </tr>
+
+    <tr class="govuk-table__row">
+      <td class="govuk-table__cell">
+        <a href="acrs/Over-18/information-you-have-given-us-returning.html">Information you have given us (returning)</a>
+      </td>
+      <td class="govuk-table__cell">
+        Page a returning user sees after signing in  
+      </td>
+    </tr>
+
+    <tr class="govuk-table__row">
+      <td class="govuk-table__cell">
+        <a href="acrs/Over-18/who-is-completing-this-form.html">Who is completing this form?</a>
+      </td>
+      <td class="govuk-table__cell">
+        Allows user to select between referrer, a helper or immigration advisor  
+      </td>
+    </tr>
+
+    <tr class="govuk-table__row">
+      <td class="govuk-table__cell">
+        <a href="acrs/Over-18/what-is-your-full-name.html">What is your full name?</a>
+      </td>
+      <td class="govuk-table__cell">
+        Asks referrers for their full name  
+      </td>
+    </tr>
+
+    <tr class="govuk-table__row">
+      <td class="govuk-table__cell">
+        <a href="acrs/Over-18/helpers-details.html">Helper's details</a>
+      </td>
+      <td class="govuk-table__cell">
+        Asks for helpers' name, relationship to referrer and organisation if the user has selected a helper  
+      </td>
+    </tr>
+
+    <tr class="govuk-table__row">
+      <td class="govuk-table__cell">
+        <a href="acrs/Over-18/immigration-adviser-details.html">Immigration adviser's details</a>
+      </td>
+      <td class="govuk-table__cell">
+        If a user has selected an immigration adviser, page to capture their details
+      </td>
+    </tr>
+
+    <tr class="govuk-table__row">
+      <td class="govuk-table__cell">
+        <a href="acrs/Over-18/complete-form-as-applicant.html">Complete the form as if you are the referrer</a>
+      </td>
+      <td class="govuk-table__cell">
+        Page a user sees if they have completed the helper or IA details page
+      </td>
+    </tr>
+
+    <tr class="govuk-table__row">
+      <td class="govuk-table__cell">
+        <a href="acrs/Over-18/is-this-full-names-email-address.html">Is this [full name]'s email address?</a>
+      </td>
+      <td class="govuk-table__cell">
+        Checks whether the sign in email belongs to the referrer
+      </td>
+    </tr>
+
+    <tr class="govuk-table__row">
+      <td class="govuk-table__cell">
+        <a href="acrs/Over-18/can-you-provide-a-telephone-number.html">Can you provide a telephone number?</a>
+      </td>
+      <td class="govuk-table__cell">
+        Asks users to optionally provide a telephone number
+      </td>
+    </tr>
+
+    <tr class="govuk-table__row">
+      <td class="govuk-table__cell">
+        <a href="acrs/Over-18/what-is-your-address.html">What is your address?</a>
+      </td>
+      <td class="govuk-table__cell">
+        Asks users to provide a contact residential address
+      </td>
+    </tr>
+
+    <tr class="govuk-table__row">
+      <td class="govuk-table__cell">
+        <a href="acrs/Over-18/do-you-want-to-apply-to-bring-a-partner-to-the-uk.html">Husbands, wives, spouses and unmarried partners</a>
+      </td>
+      <td class="govuk-table__cell">
+        Explains eligibility criteria around married and unmarried partners with a yes/no question
+      </td>
+    </tr>
+
+    <tr class="govuk-table__row">
+      <td class="govuk-table__cell">
+        <a href="acrs/Over-18/partners-details.html">Partner's details</a>
+      </td>
+      <td class="govuk-table__cell">
+        Page that asks for details of partner, when user has opted to refer a partner
+      </td>
+    </tr>
+
+    <tr class="govuk-table__row">
+      <td class="govuk-table__cell">
+        <a href="acrs/Over-18/partner-you-want-to-apply-to-bring-to-the-uk.html">Partner summary</a>
+      </td>
+      <td class="govuk-table__cell">
+        Midway summary page that lets users check their entered partner's details 
+      </td>
+    </tr>
+
+    <tr class="govuk-table__row">
+      <td class="govuk-table__cell">
+        <a href="acrs/Over-18/children-and-people-aged-under-18.html">Children question</a>
+      </td>
+      <td class="govuk-table__cell">
+        Explains eligibility criteria around children with a yes/no question
+      </td>
+    </tr>
+
+    <tr class="govuk-table__row">
+      <td class="govuk-table__cell">
+        <a href="acrs/Over-18/do-you-want-to-apply-to-bring-other-family-members-to-the-uk.html">Additional family members</a>
+      </td>
+      <td class="govuk-table__cell">
+        Explains eligibility criteria around additional family members with a yes/no question
+      </td>
+    </tr>
+
+    <tr class="govuk-table__row">
+      <td class="govuk-table__cell">
+        <a href="acrs/Over-18/other-family-members-details.html">Additional family member details</a>
+      </td>
+      <td class="govuk-table__cell">
+        Allows users to add details of an additional family member
+      </td>
+    </tr>
+
+    <tr class="govuk-table__row">
+      <td class="govuk-table__cell">
+        <a href="acrs/Over-18/do-you-have-family-members-that-live-in-the-uk.html">Family living in the UK</a>
+      </td>
+      <td class="govuk-table__cell">
+        Explains criteria around family living in the UK with a yes/no question
+      </td>
+    </tr>
+
+    <tr class="govuk-table__row">
+      <td class="govuk-table__cell">
+        <a href="acrs/Over-18/upload-evidence.html">Upload evidence (no files uploaded)</a>
+      </td>
+      <td class="govuk-table__cell">
+        Allows users to upload files as evidence for their referral
+      </td>
+    </tr>
+
+    <tr class="govuk-table__row">
+      <td class="govuk-table__cell">
+        <a href="acrs/Over-18/upload-evidence-files-uploaded.html">Upload evidence (files uploaded)</a>
+      </td>
+      <td class="govuk-table__cell">
+        An illustrative evidence page with files uploaded
+      </td>
+    </tr>
+
+    <tr class="govuk-table__row">
+      <td class="govuk-table__cell">
+        <a href="acrs/Over-18/why-is-there-evidence-you-cannot-provide.html">Evidence notes</a>
+      </td>
+      <td class="govuk-table__cell">
+        Textarea component for users to explain their evidence or lack of
+      </td>
+    </tr>
+
+    <tr class="govuk-table__row">
+      <td class="govuk-table__cell">
+        <a href="acrs/Over-18/where-should-we-send-your-decision.html">Do we send a decision on your referral to [sign in email]?</a>
+      </td>
+      <td class="govuk-table__cell">
+        Asks users if they want to receive their decision to the same email they signed in with
+      </td>
+    </tr>
+
+    <tr class="govuk-table__row">
+      <td class="govuk-table__cell">
+        <a href="acrs/Over-18/check-your-details.html">Check your referral</a>
+      </td>
+      <td class="govuk-table__cell">
+        Summary page
+      </td>
+    </tr>
+ 
+    <tr class="govuk-table__row">
+      <td class="govuk-table__cell">
+        <a href="acrs/Over-18/declaration.html">Declaration</a>
+      </td>
+      <td class="govuk-table__cell">
+        Declaration around children travelling unaccompanied and travel to VACs
+      </td>
+    </tr>
+
+    <tr class="govuk-table__row">
+      <td class="govuk-table__cell">
+        <a href="acrs/Over-18/application-submitted.html">Referral submitted</a>
+      </td>
+      <td class="govuk-table__cell">
+        Submission confirmation
+      </td>
+    </tr>
+
+
+    
+  </tbody>
+
+</table>
+
+<table class="govuk-table" id="under-18-pathway">
+  <caption class="govuk-table__caption govuk-table__caption--m govuk-!-margin-top-5">
+    Under 18 pathway
+  </caption>
+  <thead class="govuk-table__head">
+    <tr class="govuk-table__row">
+    <th scope="col" class="govuk-table__header">Screen</th>
+    <th scope="col" class="govuk-table__header">Description</th>
+    </tr>
+  </thead>
+
+  <tbody class="govuk-table__body">
+    <tr class="govuk-table__row">
+      <td class="govuk-table__cell">
+        <a href="acrs/under-18/information-you-have-given-us.html">Information you have given us</a>
+      </td>
+      <td class="govuk-table__cell">
+        Page a first-time user sees after signing in 
+      </td>
+    </tr>
+
+    <tr class="govuk-table__row">
+      <td class="govuk-table__cell">
+        <a href="acrs/under-18/which-form-do-you-need-to-continue.html">Which form do you need to continue?</a>
+      </td>
+      <td class="govuk-table__cell">
+        Page a user sees after signing in when they have multiple referrals linked to one email address  
+      </td>
+    </tr>
+
+    <tr class="govuk-table__row">
+      <td class="govuk-table__cell">
+        <a href="acrs/under-18/information-you-have-given-us-returning.html">Information you have given us (returning)</a>
+      </td>
+      <td class="govuk-table__cell">
+        Page a returning user sees after signing in  
+      </td>
+    </tr>
+
+    <tr class="govuk-table__row">
+      <td class="govuk-table__cell">
+        <a href="acrs/under-18/who-is-completing-this-form-under-18.html">Who is completing this form?</a>
+      </td>
+      <td class="govuk-table__cell">
+        Allows user to select between a helper or immigration advisor  
+      </td>
+    </tr>
+
+    <tr class="govuk-table__row">
+      <td class="govuk-table__cell">
+        <a href="acrs/under-18/what-is-your-full-name.html">What is your full name?</a>
+      </td>
+      <td class="govuk-table__cell">
+        Asks referrers for their full name  
+      </td>
+    </tr>
+
+    <tr class="govuk-table__row">
+      <td class="govuk-table__cell">
+        <a href="acrs/under-18/helpers-details.html">Helper's details</a>
+      </td>
+      <td class="govuk-table__cell">
+        Asks for helpers' name, relationship to referrer and organisation if the user has selected a helper  
+      </td>
+    </tr>
+
+    <tr class="govuk-table__row">
+      <td class="govuk-table__cell">
+        <a href="acrs/under-18/immigration-adviser-details.html">Immigration adviser's details</a>
+      </td>
+      <td class="govuk-table__cell">
+        If a user has selected an immigration adviser, page to capture their details
+      </td>
+    </tr>
+
+    <tr class="govuk-table__row">
+      <td class="govuk-table__cell">
+        <a href="acrs/under-18/complete-form-as-applicant.html">Complete the form as if you are the referrer</a>
+      </td>
+      <td class="govuk-table__cell">
+        Page a user sees if they have completed the helper or IA details page
+      </td>
+    </tr>
+
+    <tr class="govuk-table__row">
+      <td class="govuk-table__cell">
+        <a href="acrs/under-18/is-this-full-names-email-address.html">Is this [full name]'s email address?</a>
+      </td>
+      <td class="govuk-table__cell">
+        Checks whether the sign in email belongs to the referrer
+      </td>
+    </tr>
+
+    <tr class="govuk-table__row">
+      <td class="govuk-table__cell">
+        <a href="acrs/under-18/can-you-provide-a-telephone-number.html">Can you provide a telephone number?</a>
+      </td>
+      <td class="govuk-table__cell">
+        Asks users to optionally provide a telephone number
+      </td>
+    </tr>
+
+    <tr class="govuk-table__row">
+      <td class="govuk-table__cell">
+        <a href="acrs/under-18/what-is-your-address.html">What is your address?</a>
+      </td>
+      <td class="govuk-table__cell">
+        Asks users to provide a contact residential address
+      </td>
+    </tr>
+
+    <tr class="govuk-table__row">
+      <td class="govuk-table__cell">
+        <a href="acrs/under-18/are-you-applying-to-bring-a-parent-to-the-uk.html">Are you referring a parent to come to the UK?</a>
+      </td>
+      <td class="govuk-table__cell">
+        Asks whether users are referring a parent to come to the UK
+      </td>
+    </tr>
+
+    <tr class="govuk-table__row">
+      <td class="govuk-table__cell">
+        <a href="acrs/under-18/parents-details.html">Parent's details</a>
+      </td>
+      <td class="govuk-table__cell">
+        Page that asks for details of parent
+      </td>
+    </tr>
+
+    <tr class="govuk-table__row">
+      <td class="govuk-table__cell">
+        <a href="acrs/under-18/family-in-your-application-parent.html">Parent summary 1</a>
+      </td>
+      <td class="govuk-table__cell">
+        Midway summary page that lets users check their entered partner's details 
+      </td>
+    </tr>
+
+    <tr class="govuk-table__row">
+      <td class="govuk-table__cell">
+        <a href="acrs/under-18/parents-details-2.html">Parent's details 2</a>
+      </td>
+      <td class="govuk-table__cell">
+        Page that asks for details of parent 2
+      </td>
+    </tr>
+
+    <tr class="govuk-table__row">
+      <td class="govuk-table__cell">
+        <a href="acrs/under-18/family-in-your-application-parent-2.html">Parent summary 2</a>
+      </td>
+      <td class="govuk-table__cell">
+        Midway summary page that lets users check their entered partner's details (example of 2 parents)
+      </td>
+    </tr>
+
+    <tr class="govuk-table__row">
+      <td class="govuk-table__cell">
+        <a href="acrs/under-18/are-you-applying-to-bring-a-brother-or-sister-to-the-uk.html">Are you referring a brother or sister to come to the UK?</a>
+      </td>
+      <td class="govuk-table__cell">
+        Asks whether users are referring a brother or sister
+      </td>
+    </tr>
+
+    <tr class="govuk-table__row">
+      <td class="govuk-table__cell">
+        <a href="acrs/under-18/siblings-details.html">Brother or sister's details</a>
+      </td>
+      <td class="govuk-table__cell">
+        Asks for details of first sibling
+      </td>
+    </tr>
+
+    <tr class="govuk-table__row">
+      <td class="govuk-table__cell">
+        <a href="acrs/under-18/family-in-your-application-parent-sibling.html">Summary (parents and sibling)</a>
+      </td>
+      <td class="govuk-table__cell">
+        Midway summary page containing answers for 2 parents and 1 sibling
+      </td>
+    </tr>
+
+    <tr class="govuk-table__row">
+      <td class="govuk-table__cell">
+        <a href="acrs/under-18/siblings-details-2.html">Brother or sister's details 2</a>
+      </td>
+      <td class="govuk-table__cell">
+        Asks for details of second sibling
+      </td>
+    </tr>
+
+    <tr class="govuk-table__row">
+      <td class="govuk-table__cell">
+        <a href="acrs/under-18/family-in-your-application-parent-sibling-2.html">Summary (parents and siblings)</a>
+      </td>
+      <td class="govuk-table__cell">
+        Midway summary page containing answers for 2 parents and 2 siblings
+      </td>
+    </tr>
+
+    <tr class="govuk-table__row">
+      <td class="govuk-table__cell">
+        <a href="acrs/under-18/do-you-want-to-apply-to-bring-other-family-members-to-the-uk.html">Additional family members</a>
+      </td>
+      <td class="govuk-table__cell">
+        Explains eligibility criteria around additional family members with a yes/no question
+      </td>
+    </tr>
+
+    <tr class="govuk-table__row">
+      <td class="govuk-table__cell">
+        <a href="acrs/under-18/do-you-have-family-members-that-live-in-the-uk.html">Family living in the UK</a>
+      </td>
+      <td class="govuk-table__cell">
+        Explains criteria around family living in the UK with a yes/no question
+      </td>
+    </tr>
+  
+    <tr class="govuk-table__row">
+      <td class="govuk-table__cell">
+        <a href="acrs/under-18/add-a-family-member-that-lives-in-the-uk.html">Family member 1</a>
+      </td>
+      <td class="govuk-table__cell">
+        Asks for details of first family member living in the UK
+      </td>
+    </tr>
+
+    <tr class="govuk-table__row">
+      <td class="govuk-table__cell">
+        <a href="acrs/under-18/family-members-that-live-in-the-uk.html">Family members in UK summary</a>
+      </td>
+      <td class="govuk-table__cell">
+        Summary page with details of first family member living in UK
+      </td>
+    </tr>
+
+    <tr class="govuk-table__row">
+      <td class="govuk-table__cell">
+        <a href="acrs/under-18/add-a-family-member-that-lives-in-the-uk-2.html">Family member 2</a>
+      </td>
+      <td class="govuk-table__cell">
+        Asks for details of second family member living in the UK
+      </td>
+    </tr>
+
+    <tr class="govuk-table__row">
+      <td class="govuk-table__cell">
+        <a href="acrs/under-18/family-members-that-live-in-the-uk-2.html">Family members in UK summary 2</a>
+      </td>
+      <td class="govuk-table__cell">
+        Summary page with details of two family members living in UK
+      </td>
+    </tr>
+
+    <tr class="govuk-table__row">
+      <td class="govuk-table__cell">
+        <a href="acrs/under-18/add-a-family-member-that-lives-in-the-uk-3.html">Family member 3</a>
+      </td>
+      <td class="govuk-table__cell">
+        Asks for details of third family member living in the UK
+      </td>
+    </tr>
+
+    <tr class="govuk-table__row">
+      <td class="govuk-table__cell">
+        <a href="acrs/under-18/family-members-that-live-in-the-uk-2.html">Family members in UK summary 3</a>
+      </td>
+      <td class="govuk-table__cell">
+        Summary page with details of three family members living in UK
+      </td>
+    </tr>
+
+    <tr class="govuk-table__row">
+      <td class="govuk-table__cell">
+        <a href="acrs/under-18/upload-evidence.html">Upload evidence (no files uploaded)</a>
+      </td>
+      <td class="govuk-table__cell">
+        Allows users to upload files as evidence for their referral
+      </td>
+    </tr>
+
+    <tr class="govuk-table__row">
+      <td class="govuk-table__cell">
+        <a href="acrs/under-18/upload-evidence-files-uploaded.html">Upload evidence (files uploaded)</a>
+      </td>
+      <td class="govuk-table__cell">
+        An illustrative evidence page with files uploaded
+      </td>
+    </tr>
+
+    <tr class="govuk-table__row">
+      <td class="govuk-table__cell">
+        <a href="acrs/under-18/why-is-there-evidence-you-cannot-provide.html">Evidence notes</a>
+      </td>
+      <td class="govuk-table__cell">
+        Textarea component for users to explain their evidence or lack of
+      </td>
+    </tr>
+
+    <tr class="govuk-table__row">
+      <td class="govuk-table__cell">
+        <a href="acrs/under-18/where-should-we-send-your-decision.html">Do we send a decision on your referral to [sign in email]?</a>
+      </td>
+      <td class="govuk-table__cell">
+        Asks users if users want to receive their decision to the same email they signed in with
+      </td>
+    </tr>
+
+    <tr class="govuk-table__row">
+      <td class="govuk-table__cell">
+        <a href="acrs/under-18/check-your-details.html">Check your referral</a>
+      </td>
+      <td class="govuk-table__cell">
+        Summary page
+      </td>
+    </tr>
+ 
+    <tr class="govuk-table__row">
+      <td class="govuk-table__cell">
+        <a href="acrs/under-18/declaration.html">Declaration</a>
+      </td>
+      <td class="govuk-table__cell">
+        Declaration around children travelling unaccompanied and travel to VACs
+      </td>
+    </tr>
+
+    <tr class="govuk-table__row">
+      <td class="govuk-table__cell">
+        <a href="acrs/under-18/application-submitted.html">Referral submitted</a>
+      </td>
+      <td class="govuk-table__cell">
+        Submission confirmation
+      </td>
+    </tr>
+
+
+    
+  </tbody>
+
+</table>
 
 {% endblock %}
